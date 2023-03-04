@@ -1,0 +1,256 @@
+\usepackage{fullpage}
+\usepackage{times}
+\usepackage{amsmath} 
+\usepackage{latexsym}
+\usepackage{wrapfig}
+\usepackage{amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{color}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{makeidx}
+\usepackage{nextpage}
+\usepackage[figuresright]{rotating}
+\usepackage{appendix}
+\usepackage[T1]{fontenc}
+\usepackage[nottoc]{tocbibind} % Table of contents
+\usepackage[titles,subfigure]{tocloft}
+\usepackage{subfig}
+\usepackage{colortbl}
+\usepackage{ wasysym }
+\usepackage{rotating}
+\usepackage[table]{xcolor}
+\usepackage[hyperfootnotes=false]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue}
+\usepackage{cancel}
+\let\checkmark\relax
+\usepackage{dingbat}
+\usepackage{ifthen}
+\usepackage{longtable}
+
+\newcounter{bluefigure}
+\newcounter{bluetable}
+\makeatletter
+\renewcommand\theenumii{(\alph{enumii})}
+\renewcommand\labelenumii{(\alph{enumii})}
+\renewcommand\p@enumiii{\theenumi\theenumii}
+\makeatother
+
+    \makeatletter
+    \renewcommand\part{%
+      \if@openright
+        \cleardoublepage
+      \else
+        \clearpage
+      \fi
+      \thispagestyle{empty}%
+      \if@twocolumn
+        \onecolumn
+        \@tempswatrue
+      \else
+        \@tempswafalse
+      \fi
+      \null\vfil
+      \secdef\@part\@spart}
+    \makeatother 
+
+\definecolor{burntorange}{RGB}{207, 83, 0}
+\definecolor{lightblue}{rgb}{0.93,0.95,1.0}
+\definecolor{lightgray}{gray}{0.9}
+
+\def\censor#1{\censorloopword#1 \nil}
+\def\censorloopword#1 #2\nil{%
+  \phantom{#1} % <- Note the space!
+  \ifx&#2&% #2 is empty, then & equals &
+    \let\next\relax
+  \else
+    \def\next{\censorloopword#2\nil}% iterate
+  \fi
+  \next\ignorespaces}
+
+\def\do#1{#1}
+
+\newtheorem{theorem}{Theorem}[chapter]  % [chapter] was needed to reset the numbers of the theorems after a chapter
+\newtheorem*{question}{Question}
+\newtheorem{act}{Activity}[chapter]
+\renewenvironment{proof}{\noindent{\em Proof}:}{\hfill \maltese}
+\newenvironment{remark}{\medskip\noindent{\bf Remark}.}{}
+\newenvironment{references}{\begin{thebibliography}{99}}{\end{thebibliography}}
+\newcommand{\Strut}{\rule[0ex]{0ex}{4ex}}
+\renewcommand{\thefootnote}{} % suppress footnote mark
+
+\theoremstyle{definition} % Makes text upright and title upright and bold.
+\newtheorem{definition}[theorem]{Definition}
+
+  \newcounter{case}[theorem]
+  \newcommand{\startcases}{\setcounter{case}{0}}
+  \newcommand{\case}[1]{\refstepcounter{case}\bigskip\noindent{\bf Case \thecase:}%
+  \quad#1\hfill \vspace{11pt}}
+  %
+  \newcounter{subcase}[case]
+  \newcommand{\startsubcases}{\setcounter{subcase}{0}}
+  \newcommand{\subcase}[1]{\refstepcounter{subcase}\bigskip\noindent{\bf Case \thecase.\thesubcase:}%
+  \quad#1\hfill\vspace{11pt}}
+  %
+  \newcounter{subsubcase}[subcase]
+  \newcommand{\startsubsubcases}{\setcounter{subsubcase}{0}}
+  \newcommand{\subsubcase}[1]{\refstepcounter{subsubcase}\bigskip\noindent%
+  {\bf Case \thecase.\thesubcase.\thesubsubcase:}%
+  \quad#1\hfill\vspace{11pt}}
+  %
+  \newcounter{subsubsubcase}[subsubcase]
+  \newcommand{\startsubsubsubcases}{\setcounter{subsubsubcase}{0}}
+  \newcommand{\subsubsubcase}[1]{\refstepcounter{subsubsubcase}\bigskip\noindent%
+  {\bf Case \thecase.\thesubcase.\thesubsubcase.\thesubsubsubcase:}%
+  \quad#1\hfill\vspace{11pt}}
+  %
+  \newcounter{subsubsubsubcase}[subsubsubcase]
+  \newcommand{\startsubsubsubsubcases}{\setcounter{subsubsubsubcase}{0}}
+  \newcommand{\subsubsubsubcase}[1]{\refstepcounter{subsubsubsubcase}\bigskip\noindent%
+  {\bf Case \thecase.\thesubcase.\thesubsubcase.\thesubsubsubcase.\thesubsubsubsubcase:}%
+  \quad#1\hfill\vspace{11pt}}
+
+% Makes a better itemize that is closer together between two items.
+\newenvironment{packedItem}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+% Makes a better itemize that is closer together between two items.
+\newenvironment{packedEnum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\def\A{{\cal A}}
+\newcommand{\inst}{\em}  % Use this command for black and white printing
+\newcommand{\ds}{\ensuremath{\displaystyle}}
+\newcommand{\town}{Spoonerville }
+\newcommand{\wrapup}{Wrap-up}
+\newcommand{\order}{order }
+\newcommand{\orders}{orders }
+\newcommand{\orderper}{order.}
+\newcommand{\ordersper}{orders.}
+\renewcommand{\-}{\ensuremath{\text{--}}}
+\newcommand{\wt}{\ensuremath{\text{\normalfont \tt wt}}}
+\newcommand{\val}{\ensuremath{\text{\normalfont \tt val}}}
+
+\renewcommand{\strut}{ \rule[-8pt]{0pt}{22pt} } %invisible space (usually used to make blank entries in a table a little taller.)
+\newcommand{\bigstrut}{ \rule[-8pt]{0pt}{32pt} } %bigger invisible space
+\newcommand{\hstrut}{ \rule{36pt}{0pt} } %horizontal invisible space
+
+% make marginpar fit better
+\setlength{\marginparwidth}{.75in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\normalfont\cftdotfill{\cftsecdotsep}}
+
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+\renewcommand{\cftbeforesecskip}{0em}
+
+
+% Page-Format Details
+\setlength{\oddsidemargin}{0.50in}     % Left side margin
+\setlength{\evensidemargin}{0.0in}    % Right side margin
+\setlength{\topmargin}{0.00in}         % Top margin
+\setlength{\headheight}{0.00in}        % Header height
+\setlength{\headsep}{0.00in}           % Separation between header and
+                                       % main text
+\setlength{\topskip}{0.00in}           % Top skip
+\setlength{\textwidth}{6.00in}         % Width of the text
+\setlength{\textheight}{8.61in}        % Height of the text
+
+% Customizing Captions (Figures, Tables, etc)
+\setlength{\floatsep}{0.15in}          % Space left between floats.
+\setlength{\textfloatsep}{\floatsep}   % Space between last top float 
+                                       % or first bottom float and the text
+\setlength{\intextsep}{\floatsep}      % Space left on top and bottom 
+                                       % of an in-text float 
+\setlength{\abovecaptionskip}{0.10in}  % Space above caption
+\setlength{\belowcaptionskip}{0.05in}  % Space below caption
+\setlength{\captionmargin}{0.50in}     % Left/Right margin for caption
+\setlength{\captionwidth}{5.00in}      % Caption width
+\setlength{\abovedisplayskip}{-0.10in} % Space before Math stuff
+\setlength{\belowdisplayskip}{-0.10in} % Space after Math stuff
+
+
+\makeindex
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\usepackage{fancyhdr,graphicx,lastpage}%y
+
+\fancyhf{} % clear the headers
+
+
+\fancypagestyle{specialfooter}{%
+  \fancyhf{}% Clear header/footer
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[L]{Southern Connecticut State University}% Right header
+  \fancyfoot[C]{\thepage}% Center footer
+  \fancyfoot[R]{Mathematics Department}
+}
+
+\pagestyle{plain}% Set page style to plain.
+
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\providecommand{\tabularnewline}{\\}
+
+\newcommand{\activity}[1]{\noindent{}\textbf{Activity #1}}
+
+%</preamble>
+
+%<*IGP:intro>
+%\title{\vspace{2.5in}
+%Mathematics in the World Around Us\\
+%Instructor's Guide}
+
+\author{Leon Brin, Braxton Carrigan, Joseph Fields}
+
+
+\date{\parbox{\linewidth}{\centering%
+  \today\endgraf\bigskip
+\endgraf
+\vspace{2.5in}
+}}
+
+\newboolean{InWB}
+\setboolean{InWB}{true}
+\newboolean{InIG}
+\setboolean{InIG}{false}
+\newboolean{includehints}
+\setboolean{includehints}{false}
+
+\newcommand{\wbvfill}{\ifthenelse{\boolean{InWB}}{\vfill}{}}
+\newcommand{\wbnewpage}{\ifthenelse{\boolean{InWB}}{\newpage}{}}
+
+\newcommand{\Instr}[1]
+{\ifthenelse{\boolean{InIG}}{\color{burntorange}\textbf{To the instructor:}#1\color{black}}{}}
+
+\newcommand{\Hint}[1]{%
+\ifthenelse{\boolean{includehints}}{{\bf Hint:}% \newline %
+#1 }{ %don't print anything if yer not in the Instructor Guide
+}% end of the ifthenelse
+}% end of command definition
+
