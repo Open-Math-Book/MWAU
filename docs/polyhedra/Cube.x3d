@@ -25,6 +25,70 @@
           <Coordinate USE='pts'/>
         </IndexedLineSet>
       </Shape>
+      <Transform translation='1 1 1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-1 1 1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-1 -1 1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='1 -1 1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='1 1 -1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-1 1 -1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-1 -1 -1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
+      <Transform translation='1 -1 -1'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.1'/>
+          </Shape>
+      </Transform>
     </Group>
   </Scene>
 </X3D>
