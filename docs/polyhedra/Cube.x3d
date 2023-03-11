@@ -30,7 +30,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='-1 1 1'>
@@ -38,7 +38,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='-1 -1 1'>
@@ -46,7 +46,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='1 -1 1'>
@@ -54,7 +54,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='1 1 -1'>
@@ -62,7 +62,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='-1 1 -1'>
@@ -70,7 +70,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='-1 -1 -1'>
@@ -78,7 +78,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
       <Transform translation='1 -1 -1'>
@@ -86,7 +86,7 @@
             <Appearance>
               <Material diffuseColor='0 0 0'/>
             </Appearance>
-            <Sphere radius='0.1'/>
+            <Sphere radius='0.03'/>
           </Shape>
       </Transform>
     </Group>
