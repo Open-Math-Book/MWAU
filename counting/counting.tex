@@ -1623,21 +1623,21 @@ You are charged with filling and invoicing store shipment orders of KitKat to in
 To invoice the stores for shipping you need to figure out the total cost to your company. Obviously buying in bulk will be helpful to stores but packaging and shipping varies depending on the exact order as described below.
 
 \begin{itemize}
-    \item A single package of KitKats cost \$0.22 to package and ship.
-    \item A flat of KitKats consists of four packages and costs \$0.80 to package and ship.
-    \item A carton of KitKats consists of four flats and costs \$3.10 to package and ship.
-    \item A box of KitKats consists of four cartons and costs \$12.20 to package and ship.
-    \item A crate of KitKats consists of four boxes and costs \$48.50 to package and ship.
+    \item A single package of KitKats cost \$0.72 to package and ship.
+    \item A sleeve of KitKats consists of four packages and costs \$1.54 to package and ship.
+    \item A carton of KitKats consists of four sleeves and costs \$3.18 to package and ship.
+    \item A box of KitKats consists of four cartons and costs \$6.46 to package and ship.
+    \item A crate of KitKats consists of four boxes and costs \$13.02 to package and ship.
 \end{itemize}
 
-For example, if a store ordered 20 wafer bars, that would be packaged and shipped in the containers of one sleeve and one package to minimize cost. The total cost for shipping this way is \$.80 + \$.22 = \$1.02. Your job is to make sure your orders are shipping for the lowest cost.
+For example, if a store ordered 20 wafer bars, that would be packaged and shipped in the containers of one sleeve and one package to minimize cost. The total cost for shipping this way is \$1.54 + \$.72 = \$2.26. Your job is to make sure your orders are shipping for the lowest cost.
 
 \begin{enumerate}\setcounter{enumi}{2}
-    \item How many wafers are in 2 cartons and 3 flats?
+    \item How many wafers are in 2 cartons and 3 sleeves?
     \wbvfill
     \item How many wafers are in 1 crate?
     \wbvfill
-    \item How many wafers are in 2 boxes, 3 cartons, 1 flat, and 1 package? How much does it cost to ship these wafers?
+    \item How many wafers are in 2 boxes, 3 cartons, 1 sleeve, and 1 package? How much does it cost to ship these wafers?
     \wbvfill
     \wbnewpage
     \item In what packaging containers would you ship 56 wafer bars? How much would that cost? Remember, you are trying to ship them at minimum cost.
@@ -1646,9 +1646,9 @@ For example, if a store ordered 20 wafer bars, that would be packaged and shippe
     \wbvfill
     \item Al owns three convenience stores and realizes he can save money if he has all three of his orders combined into one. He calls to ask this after you have calculated each of his shipments, which are each listed below. Can you figure out his combined order without counting the number of individual wafers ordered?
     \begin{itemize}
-        \item Store 1: 1 box, 2 cartons, 3 flats and 1 package.
+        \item Store 1: 1 box, 2 cartons, 3 sleeves and 1 package.
         \item Store 2: 3 cartons and 3 packages.
-        \item Store 3: 2 boxes, 2 cartons, and 2 flats.
+        \item Store 3: 2 boxes, 2 cartons, and 2 sleeves.
     \end{itemize}
     
     \wbvfill
@@ -1703,20 +1703,24 @@ Hershey bars are packaged in groups of 12 and shipped by the following requireme
 As you can see Caramellos are packaged in groups of 6. They are shipped by the following requirements:
 \begin{itemize}
     \item A single package of Caramellos cost \$0.15 to package and ship.
-    \item A flat of Caramellos consists of six packages and costs \$0.85 to package and ship.
-    \item A box of Caramellos consists of six flats and costs \$4.50 to package and ship.
+    \item A sleeve of Caramellos consists of six packages and costs \$0.85 to package and ship.
+    \item A box of Caramellos consists of six sleeves and costs \$4.50 to package and ship.
     \item A crate of Caramellos consists of six boxes and costs \$24.75 to package and ship.
 \end{itemize}
 \begin{enumerate}
-    \item How many Caramellos are there in 5 boxes, 4 flats, and 3 packages?
-    \wbnewpage
+    \item How many Caramellos are there in 5 boxes, 4 sleeves, and 3 packages?
+    \wbvfill
     \item In what packaging containers would you ship 270 Caramellos? How much would that cost?
     \wbvfill
-    \item If you have the following two orders that need to be combined, what is the packaging and cost of the combined order with lowest cost? Answer without first computing the total number of Caramellos or packages of Caramellos.
-    \begin{itemize}
-        \item Store 1: 1 crate, 2 boxes and 5 packages.
-        \item Store 2: 5 boxes, 5 flats and 4 packages.
-    \end{itemize}
+\end{enumerate}
+\wbnewpage
+\noindent For sake of efficiency, the candy shipping company uses an abbreviation for each shipment. They simply list the number of crates, boxes, sleeves, packages, and individual Caramellos to be sent using a sequence of digits, in that order. For example, a shipment of 5 crates, 3 boxes, and 4 packages would be abbreviated as 53040. Notice the third digit is 0 since zero sleeves are being sent, and there will always be a 0 at the end since, at this time, individual Caramellos cannot be shipped.
+\begin{enumerate}[resume]
+	\item How many individual Caramellos, packages, sleeves, boxes, and crates are sent in the order abbreviated by 20450?
+    \wbvfill
+    \item How many Caramellos, in total, are sent in the order abbreviated by 20450?
+    \wbvfill
+    \item What would be the abbreviation for the least expensive shipment of 1000 Caramellos?
     \wbvfill
 \end{enumerate}
 

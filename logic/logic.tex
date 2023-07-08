@@ -975,151 +975,233 @@ False&False&True&True&True&True&True&True \\
 
 \subsection{Entrance Activity: Statements in Minesweeper}
 
-The game of Minesweeper is a popular game that requires players to use logic to solve the puzzle. The game begins with a board of squares, some of which contain hidden mines. The number of mines is indicated at the beginning of the game. The rules of the game are:
+The game of Minesweeper is a popular game that requires players to use logic to solve the puzzle. The game begins with a board of squares, some of which contain hidden mines. Game play can be summarized in one sentence: \textbf{the number on a block shows the number of mines adjacent to it and you have to flag all the mines}. In more detail:
 \begin{itemize}
-    \item If you click a mine you lose. 
-    \item If you have identified a square that does not contain a mine, click it. If you are right, this will reveal the number of mines in the eight spaces surrounding that location.
-    \item If you have identified a square hiding a mine, right-click it to indicate that knowledge. This will place a flag on that spot.
-    \item If the player finds the location of all mines and selects all other locations, then the player has won the game.
+	\item Start by clicking any random place since it is your first move. You do not have any clues to the locations of the mines yet!
+    \item When you identify a square hiding a mine, flag it by right-clicking. This will place a flag on that spot.
+    \item When you identify a square that is not hiding a mine, clear it by clicking it. This will reveal the number of mines in the adjacent squares, or more if there are no adjacent mines.
+    \item If you accidentally clear a mine you lose. 
+    \item If you flag all the mines and clear all other locations, you win!
 \end{itemize}
 
 \noindent Before reading any further go to \href{https://freeminesweeper.org/}{https://freeminesweeper.org/} and play a few games! If it is your first time playing, you might want to select Beginner from the Game menu.
 
-Here is a sample of the type of question you will be asked and how you are expected to answer. Shown is a game in progress where the player has indicated the locations of 4 mines. The top left number indicates there are 6 remaining mines. In this example, we have labelled one location with the letter ``A'' to indicate a space we would like to discuss.
+Here is a sample of the type of question you will be asked and how you are expected to answer. Shown is a game in progress where the player has indicated the locations of 4 mines (marked by the 4 flags). The 6 above the game board and on the left indicates there are 6 remaining mines. In this example, we have labelled one location with the letter ``A'' to indicate a space we would like to discuss. You will not see letters on the squares while playing the game online.
 
 \includegraphics[width=2in]{images/minesweeper1.pdf}
 
 \noindent \textbf{Sample Question:} Determine whether the following statement is true or false and explain. Square A is a mine.
 
-\noindent \textbf{Sample Answer:} FALSE. The location down and to the right contains a 1 and is already next to a flag so no other surrounding location can contain a mine. Therefore square A must not be a mine. So we can conclude that the statement ``Square A is a mine." is false.
-
-%</truthTables:Minesweeper:entrance:intro>
-
-\newpage
+\noindent \textbf{Sample Answer:} FALSE. The square directly below the flag next to the A contains a $1$, indicating that one and only one square adjacent to it is a mine. Since the square above the $1$ (the flag) is a mine, square A must not be a mine. We can conclude that the statement ``Square A is a mine." is false.
 
 %<*truthTables:Minesweeper:entrance:game>
-\noindent Consider the in-progress game below and determine if each statement below is true or false. Provide a brief justification for your claim.
-
-\includegraphics[width=2in]{images/MinesweeperBegin.pdf}
+Consider the in-progress game below and determine if each statement below is true or false. Provide a brief justification for your claim.
+\par\includegraphics[width=2in]{images/MinesweeperBegin.pdf}
     \begin{enumerate}
         \item Squares A and B are mines.
-        \par\Instr{ TRUE. The 2 next to the A requires two adjacent mines, and there are exactly 2 adjacent spaces that have not yet been uncovered. Those are squares A and B, so A and B must be the two mines.        
-        }
+        \par\Instr{ TRUE. The 2 next to the A requires two adjacent mines, and there are exactly 2 adjacent spaces that have not yet been cleared. Those are squares A and B, so A and B must be the two mines.}
         \wbvfill
         \item Square C is a mine
-        \par\Instr{ FALSE. The 2 next to the B requires two adjacent mines. Since squares A and B are mines and are both adjacent, there must be no more mines adjacent to that 2. Since C is adjacent to the 2 also, it cannot be a mine.
-        }
-         \wbvfill
+        \par\Instr{ FALSE. The 2 next to the B requires two adjacent mines. Since squares A and B are mines and are both adjacent, there must be no more mines adjacent to that 2. Since C is adjacent to the 2 also, it cannot be a mine.}
+        \wbvfill
         \item Squares F and E are mines
-        \par\Instr{ FALSE. There can only be one mine adjacent to the square above the F. Since both E and F are adjacent to this square, they cannot both be mines.
-        }
-         \wbvfill
+        \par\Instr{ FALSE. There can only be one mine adjacent to the square above F. Since both E and F are adjacent to this square, they cannot both be mines.}
+        \wbvfill
         \item Square D is a mine.
-        \par\Instr{ FALSE. Squares B,E,F are all adjacent to the 2 above the E. B is a mine and exactly one of E and F is a mine due to the 1 above the F. Either way, D cannot be a mine since that would place a third mine adjacent to the 2 above the E.
-        }
-         \wbvfill
+        \par\Instr{ FALSE. Squares B,E,F are all adjacent to the 2 above the E. B is a mine and exactly one of E and F is a mine due to the $1$ above the F. Either way, D cannot be a mine since that would place a third mine adjacent to the 2 above the E.}
+        \wbvfill
     \end{enumerate}
-
 
 \newpage
 \subsection{Implications in Minesweeper}
 
-In the game Minesweeper sometimes we cannot determine whether a square is a mine or not without further information. If we can determine the state of a nearby square, however, that may help us figure out the state of the original square. Here we wish to explore these scenarios and how logic plays a roll in beating the game.
-
+In the game Minesweeper sometimes we cannot determine whether a square is a mine or not at first glance. If we can determine the state of a nearby square, however, that may help us figure it out. Here we wish to explore these scenarios and how logic plays a roll in beating the game.
 
 \begin{enumerate}
-\item Consider this portion of an in-progress game. Are the statements below true or false? Explain.
-
-\includegraphics[width=3in]{images/MinesweeperImplicationBegin.pdf}
+\item \label{Minesweeper1} Consider this portion of an in-progress game. Are the statements below true, false, or indeterminate (need more information)? Explain.
+\par\includegraphics[width=2.5in]{images/MinesweeperImplication01.png}
 \begin{enumerate}
-    \item If square A is a mine, then square B is not a mine.
+    \item A is a mine.
+    \par\Instr{ INDETERMINATE. Technically this is a TRUE statement, but it requires a lengthy argument (to be made forthwith). Without looking ahead or going through the investigation, the most likely and appropriate answer is indeterminate.}
     \wbvfill
-    \item If square A is not a mine, then square B is a mine.
+    \item B is a mine.
+    \par\Instr{ INDETERMINATE. Technically this is a FALSE statement, but it requires a lengthy argument (the same one that leads to the conclusion that A is a mine). Without looking ahead or going through the investigation, the most likely and appropriate answer is indeterminate.}
+    \wbvfill
+    \item \label{Minesweeper1.1} A is a mine or B is a mine.
+    \par\Instr{ TRUE. A and B are both adjacent to the leftmost one, so at least one of them must be a mine. Of course the $1$ means exactly one of them must be a mine, but to state that A or B is true is to say that one or the other or both are true (that is, at least one is a mine is all that is needed).}
+    \wbvfill
+    \item \label{Minesweeper1.2} A is a mine and B is a mine.
+    \par\Instr{ FALSE. A and B are both adjacent to the leftmost one, so they cannot both be mines. The combination of this statement being false and the previous statement being true leads to the conclusion (or is the logically equivalent statement) that exactly one of A and B is a mine.}
     \wbvfill
 \end{enumerate}
     
-\item \label{Minesweeper2} Now we will consider a different portion of the same in-progress game. Are the following statements true or false? Explain.
-
-\includegraphics[width=2.25in]{images/MinesweeperImplication2.pdf}
+\item \label{Minesweeper2} What can we conclude from the exploration in question \ref{Minesweeper1}? Circle one and explain.
 \begin{enumerate}
-    \item If square Y is a mine, then square Z is not a mine.
+    \item Neither A nor B is a mine.
+    \item Both A and B are mines.
+    \item Either A is a mine or B is a mine, but not both.
+\end{enumerate}
+\par\Instr{ From \ref{Minesweeper1.1} and \ref{Minesweeper1.2} (or from the fact that A and B are adjacent to the leftmost $1$), we conclude "Either A is a mine or B is a mine, but not both."}
+\wbvfill
+
+\wbnewpage
+\item \label{Minesweeper3} So which is it? Is A the mine? or is B? To figure this out logically, we make A a mine and see what happens. So suppose A is a mine (as if we knew this to be a fact) and determine whether the following statements are true or false.
+\begin{enumerate}
+    \item If A is a mine, then B is clear.
+    \par\Instr{ TRUE. The leftmost $1$ requires exactly one of A and B to be a mine.}
     \wbvfill
-    \item If square Y is not a mine, then square Z is a mine.
+    \item If A is a mine, then B is clear and C is clear.
+    \par\Instr{ TRUE. C must also be clear because the $1$ above the B is adjacent to both A and C so exactly one of them must be a mine (and we have assumed it is A).}
+    \wbvfill
+    \item If A is a mine, then B is clear and C is clear and D is a mine.
+    \par\Instr{ TRUE. The $1$ above C is adjacent to B,C,D. Since B and C are clear, D must be the mine.}
+    \wbvfill
+    \item If A is a mine, then B is clear and C is clear and D is a mine and E is a mine and F is a mine.
+    \par\Instr{ FALSE. The $1$ above D is adjacent to C,D,E. Since D is a mine, E must not be.}
+    \wbvfill
+    \item If A is a mine, then B is clear and C is clear and D is a mine and E is a mine and F is clear.
+    \par\Instr{ FALSE. The $1$ above D is adjacent to C,D,E. Since D is a mine, E must be clear.}
+    \wbvfill
+    \item If A is a mine, then B is clear and C is clear and D is a mine and E is clear and F is a mine.
+    \par\Instr{ TRUE. The 2 above E is adjacent to D,E,F. Since E is clear, F must be a mine.}
+    \wbvfill
+    \item If A is a mine, then B is clear and C is clear and D is a mine and E is clear and F is clear.
+    \par\Instr{ FALSE. The 2 above E is adjacent to D,E,F. Only one of these squares is clear.}
+    \wbvfill
+\end{enumerate}
+Now suppose B is a mine (as if we knew this to be a fact) and start over, assuming we don't know anything about any other square to begin. Determine whether the following statements are true or false.
+\begin{enumerate}
+    \item If B is a mine, then A is clear.
+    \par\Instr{ TRUE. The leftmost $1$ requires exactly one of A and B to be a mine.}
+    \wbvfill
+    \item If B is a mine, then A is clear and C is clear.
+    \par\Instr{ TRUE. C must also be clear because the $1$ above the B is adjacent to both B and C so exactly one of them must be a mine (and we have assumed it is B).}
+    \wbvfill
+    \item If B is a mine, then A is clear and C is clear and D is clear.
+    \par\Instr{ TRUE. The $1$ above C is adjacent to B,C,D. Since B is a mine, D must be clear.}
+    \wbvfill
+    \item If B is a mine, then A is clear and C is clear and D is clear and E is a mine and F is a mine.
+    \par\Instr{ FALSE. The $1$ above the F requires that only one of E and F be a mine.}
+    \wbvfill
+    \item If B is a mine, then A is clear and C is clear and D is clear and E is a mine and F is clear.
+    \par\Instr{ FALSE. The 2 is adjacent to D,E,F. Since D is clear, F cannot also be clear.}
+    \wbvfill
+    \item If B is a mine, then A is clear and C is clear and D is clear and E is clear and F is a mine.
+    \par\Instr{ FALSE. The 2 is adjacent to D,E,F. Since D is clear, E cannot also be clear.}
+    \wbvfill
+    \par\Instr{ FALSE. The 2 is adjacent to D,E,F. Since D is clear, F cannot also be clear.}
     \wbvfill
 \end{enumerate}
 
 \wbnewpage
-\item \label{minesweeper3}Now we will consider the entire board. Are the following statements true or false or is there not enough to decide? Explain.
+\item \label{Minesweeper4} According to your answers in question \ref{Minesweeper3}, which do you think is the mine? A or B? Explain.
+\par\Instr{ By contradiction, B cannot be the mine. There is no way to properly label squares A-F assuming B is a mine. Therefore A must be the mine. Since we have not formally discussed contradiction, however, students may not think this way. They may just have a hunch. Nudge them in the direction of understanding the contradiction, but don't get stuck on this. Let them proceed to the final question where it will be laid out.}
+\wbvfill
 
-\includegraphics[width=3in]{images/MinesweeperImplication.pdf}
-\begin{enumerate}
-    \item If square Y is a mine, then square Z is not a mine.
-    \wbvfill
-    \item If square Y is a mine, then squares W and X are not a mine.
-    \wbvfill
-    \item Square Y is not a mine.
-    \wbvfill
-    \item If square Y is not a mine, then square Z is a mine.
-    \wbvfill
-    \item Square Z is a mine.
-    \wbvfill
-    \item Now that you have more information about neighboring squares, do you want to change either of your answer from Question
-    \ref{Minesweeper2}?
-    \item What square would you click next to reveal a number that enables you to accurately find the location of mines in squares $W, X, Y$, or $Z$.
-    \wbvfill
-\end{enumerate}
+\item \label{Minesweeper5} Below is more of the board from question \ref{Minesweeper1}. Use this new information to determine whether each square A through J is a mine or is clear. A board without the letters is supplied for you to work on. You may want to use a pencil!
+\par\includegraphics[width=3in]{images/MinesweeperImplication02.png}
+\par\includegraphics[width=3in]{images/MinesweeperImplication03.png}
+\par\Instr{\includegraphics[width=3.25in]{images/MinesweeperImplication03-solved.png}}
+\par Were you right about squares A and B?
+\wbvfill
 
 \wbnewpage
-
-\item \label{minesweeper4}Consider the in-progress game below. Are the following statements true or false? Explain.
-
-\includegraphics[width=3in]{images/MinesweeperArgument.pdf}
-
+\item \label{Minesweeper6} Consider the in-progress game below. Are the following statements true or false? Explain.
+\par\includegraphics[width=2in]{images/MinesweeperArgument.pdf}
 \begin{enumerate}
 \item Square Q is a mine.
+\par\Instr{ TRUE. The $1$ down and to the right of Q requires an adjacent mine. Since Q is the only uncleared adjacent space it must be the mine.}
 \wbvfill
 \item Square N is a mine.
+\par\Instr{ FALSE. The $1$ next to the Q is, of course, adjacent to the Q. Since Q is a mine, no other space adjacent to the $1$ can be a mine. N is such a space and therefore cannot be a mine.}
 \wbvfill
-\item Squares I and J are mines.
+\item Square I is a mine and square J is a mine.
+\par\Instr{ FALSE. I and J are both adjacent to the $1$ below J. Therefore they cannot both be mines.}
 \wbvfill
-\item Square H or I is a mine.
+\item Square H is a mine.
+\par\Instr{ TRUE. The 3 requires three adjacent mines. One of them is at Q. One more is at I or J. N is not a mine. The only other adjacent uncleared square is H, and therefore must be a mine.}
 \wbvfill
-\item If square L is a mine, then square J is not a mine.
+\item \label{KorL1} Square K is a mine or square L is a mine.
+\par\Instr{ TRUE. The $1$ below the L requires it as K and L are the only adjacent uncleared squares.}
 \wbvfill
-\item If square J is a mine, then square L is not a mine.
+\item \label{KorL2} If square K is a mine, then square J is not a mine.
+\par\Instr{ TRUE. J and K are both adjacent to the $1$ under K. Therefore at most one of them can be a mine.}
 \wbvfill
-\item If square J is a mine, then square K is not a mine.
+\item \label{KorL3} If square L is a mine, then square J is not a mine.
+\par\Instr{ TRUE. J and L are both adjacent to the $1$ under K. Therefore at most one of them can be a mine.}
 \wbvfill
-\item Square K or L is a mine.
+\item Square J is not a mine.
+\par\Instr{ TRUE. Statements \ref{KorL1},\ref{KorL2},\ref{KorL3} prove this. Either K or L is a mine [\ref{KorL1}], and either way J is not a mine [\ref{KorL2},\ref{KorL3}].}
 \wbvfill
 \end{enumerate}
 
 \wbnewpage
-\item Below is an argument table showing that the statement ``Square A is s mine.'' is true for the game shown in question \ref{minesweeper4}. Use the statements in question \ref{minesweeper4} to create an argument table for each statement below. You may bring in new statements as needed.
-
-
+\item Below is an argument table showing that the statement ``Square A is a mine'' is true for the game shown in question \ref{Minesweeper6}.
 \begin{table}[htb]
     \centering
-    \begin{tabular}{|l|p{2.5in}|}
+    \begin{tabular}{|l|p{3in}|}
         \hline
          True Statement & Reason \\
          \hline
-         A or G is a mine & The $1$ next to the A is only adjacent to empty squares A and G.\\
+         O is a mine & O is the only uncleared square adjacent to the $1$ on its left.\\
          \hline
-         Square O is a mine & It is the only empty square adjacent to a square with a $1$.\\
+         G is not a mine. & G is adjacent to the $1$ above the O (which is a mine).\\
          \hline
-         Square G is not a mine. & It is adjacent to the $1$ above the O (which is a mine).\\
+         A is a mine or G is a mine & A and G are the only uncleared squares adjacent to the $1$ next to A.\\
          \hline
-         A is a mine. & The first and third rows (of this table) are both true only when A is a mine.\\
+         A is a mine. & The second and third rows (of this table) prove A is a mine.\\
          \hline
     \end{tabular}
     \caption{Argument}
     \label{tab:my_label}
 \end{table}
+Create an argument table for each statement below. You may use the statements in question \ref{Minesweeper6}, and you may bring in new statements as needed.
 \begin{enumerate}
-    \item Square H is a mine.
+    \item Square P is not a mine.
     \wbvfill
-    \item Square L is a mine.
+	\Instr{ 
+	\begin{table}[htb]
+    \centering
+    \begin{tabular}{|l|p{3in}|}
+        \hline
+         True Statement & Reason \\
+         \hline
+         O is a mine & O is the only uncleared square adjacent to the $1$ on its left.\\
+         \hline
+         P is not a mine. & P is adjacent to the $1$ below the O (which is a mine).\\
+         \hline
+    \end{tabular}
+    \caption{Sample Argument}
+    \label{tab:my_label}
+	\end{table}
+	}
+    \item Square I is a mine.
+	\Instr{ 
+	\begin{table}[htb]
+    \centering
+    \begin{tabular}{|l|p{3in}|}
+        \hline
+         True Statement & Reason \\
+         \hline
+         Q is a mine & O is the only uncleared square adjacent to the $1$ below and to its right.\\
+         \hline
+         N is not a mine. & Q and N are adjacent to the $1$ next to Q. Since Q is a mine, N is not.\\
+         \hline
+         K is a mine or L is a mine & K and L are the only uncleared squares adjacent to the $1$ below L.\\
+         \hline
+         If K is a mine, then J is not a mine & J and K are both adjacent to the $1$ under K.\\
+         \hline
+         If L is a mine, then J is not a mine & J and L are both adjacent to the $1$ under K.\\
+         \hline
+         J is not a mine & The previous three lines in this table prove J is not a mine.\\
+         \hline
+         I is a mine & There are 5 uncleared squares adjacent to the 3: Q,N,H,I, and J. Since N and J are not mines, the other three must be, including I.\\
+         \hline
+    \end{tabular}
+    \caption{Sample Argument}
+    \label{tab:my_label}
+	\end{table}
+	}
     \wbvfill
 \end{enumerate}
 \end{enumerate}
@@ -1128,7 +1210,7 @@ In the game Minesweeper sometimes we cannot determine whether a square is a mine
 
 \subsection{Exit Slip}
 
-For the in-progress game below, create three true statements one for each type listed below.
+For the in-progress game below, create three true statements, one for each type listed below.
 
 \includegraphics[width=3in]{images/MinesweeperExit.pdf}
 
@@ -1487,7 +1569,7 @@ $U$: & Nancy is buying food.
     \begin{enumerate}
         \item Mark each box adjacent to a numbered square with an O if it can be determined to be a mine or X if it can be determined that it is not a mine.
         \textit{* There are at least 3 squares that are mines and at least 3 squares that are not mines. There may also be squares adjacent to the numbers that cannot be determined. Leave them blank. *}
-        \item Write an argument table for one of the squares marked with an O. \textit{* Do not pick a square located in a ``corner'' adjacent to a square with a 1. *}
+        \item Write an argument table for one of the squares marked with an O. \textit{* Do not pick a square located in a ``corner'' adjacent to a square with a $1$. *}
         \item Write an argument table for one of the squares marked with an X.
     \end{enumerate}
     
@@ -1502,161 +1584,229 @@ $U$: & Nancy is buying food.
         \item Each box must be filled in black or marked with X.
         \item Beside each row of the grid are listed the lengths of the runs of consecutive black squares on that row.
         \item Above each column are listed the lengths of the runs of consecutive black squares in that column. 
+        \item Boxes that are not part of a run of black squares must be marked with X.
     \end{itemize}
+    \wbnewpage
     Here is an example of a puzzle in progress.
     \begin{center}
         \includegraphics[width=5in]{images/nonogram00.png}
     \end{center}
     The four squares in the rightmost column were filled in first. 7 consecutive squares in that column must be filled in and there are only 10 squares total, so you can only skip three of them from the top \textbf{or} three of them from the bottom. The black squares and X's immediately to the left of those four were filled in next. For example, in row 4 the tenth square in that row is filled in \textbf{and} the last run of squares must be length 3, so the two squares next to the last one must also be filled in black. That completes the run so the square next to that (the 6th from the left in that row) must not be filled (so is marked with an X). See if you can figure out why the rest of the marked squares are the way they are.
 
-    You may want to visit \href{https://www.puzzle-nonograms.com/}{https://www.puzzle-nonograms.com/}
-to try some nonogram puzzles (at a variety of difficulty levels) online.
+    You may want to visit \href{https://www.puzzle-nonograms.com/}{https://www.puzzle-nonograms.com/} to try some nonogram puzzles at a variety of difficulty levels online.
 
-\newpage
+    \item \textbf{Project Question:} You are given two KenKen puzzles. Your project is to do the following.
+    \begin{enumerate}
+        \item Fill all squares correctly in each puzzle, making note of your logic.
+        \item Write one true statement using an ``and'' that helped you complete one of the puzzles.
+        \item Write one true statement using an ``or'' that helped you complete one of the puzzles.
+    \end{enumerate}
+    The rules for solving a KenKen are as follows.
+    \begin{itemize}
+        \item The only numbers you may write are $1,2,3,\ldots$ up to the number of rows and columns. In a $4\times4$ puzzle you will use the numbers 1 through 4. In a $6\times6$ puzzle you will use the numbers 1 through 6, and so on.
+		\item Every allowable number must appear in every row and every column. No number may be repeated in any row or any column.
+		\item Each region bounded by a heavy border, called a \textbf{cage}, contains a target number and usually an arithmetic operation. You must fill that cage with numbers that reach the target using the specified arithmetic operation. Numbers may repeat within a cage, if needed, as long as they do not repeat within a single row or column.
+    \end{itemize}
+    Here is an example of a puzzle in progress.
+    \begin{center}
+        \includegraphics[width=2.5in]{images/kenken00.png}
+    \end{center}
+    Here is how the numbers were filled in to this point.
+
+    \begin{tabular}{p{3.5in}p{2in}}
+         \begin{itemize}\item The $4$ in the bottom left corner and the $3$ in the third row, third column were filled in first. Their cages are only one block so there is no operation to consider. The target number is the number that needs to be filled in.\end{itemize} & \raisebox{-2in}{\includegraphics[width=1.9in]{images/kenken00-2.png}}\\
+    \end{tabular}
+    \begin{tabular}{p{3.5in}p{2in}}
+         \begin{itemize}\item The two cages with $7+$ in them were filled in next. In each cage, the numbers $3$ and $4$ must be placed since the only way for two \textbf{different} numbers between 1 and 4 to add up to seven is to use $3$ and $4$. For the cage in the bottom right, the $4$ must be in the third row since there is already a $3$ in that row. You can come to the same conclusion by noticing there is a $4$ in the fourth row (bottom left corner) already, so the $4$ for this cage cannot be put in the fourth row. See if you can understand why the $3$ and $4$ in the $7+$ cage in the top left of the board were placed the way they were. They cannot be placed the other way around.\end{itemize} & \raisebox{-2in}{\includegraphics[width=1.9in]{images/kenken00-3.png}}\\
+    \end{tabular}
+    \begin{tabular}{p{3.5in}p{2in}}
+         \begin{itemize}\item The $5+$ cage with the $2$ and $3$ in it was filled in next. There are two ways to use different numbers between 1 and 4 to sum to five---$1$ and $4$ or $2$ and $3$. However, there are already $4$'s in columns one and two, so a $4$ cannot be used in this cage. Hence the cage will be filled with $2$ and $3$. Since there is already a $3$ in column one, the $3$ for this cage must be in column two and therefore the $2$ must be in column one.\end{itemize} & \raisebox{-2in}{\includegraphics[width=1.9in]{images/kenken00.png}}\\
+    \end{tabular}
+
+    See if you can complete the puzzle. HINT: The first column already has the numbers $2,3,4$ in it. There is only one number that can be put in the empty box of that column!
+
+    You may want to visit \href{https://www.kenkenpuzzle.com/}{https://www.kenkenpuzzle.com/} to try some KenKen puzzles at a variety of difficulty levels online. Begin by clicking the "Create Custom Puzzle" button.
 
     \item \textbf{Project Question:} You are given a Sudoku Pair Puzzle. This isn't your regular Sudoku though! Fully complete the puzzle and provide a paragraph description of how you used logic to complete the puzzle, using examples from your specific game.
 
-\textbf{(2,5) - Sudoku Pair Puzzle Rules}: Each completed puzzle is a 10 by 10 grid that contains exactly one integer from 1 to 10 in each cell. Furthermore, there are regions that must contain every integer exactly once. The regions are described below and outlined in the puzzle:
-\begin{enumerate}
-    \item Each row is its own region.
-    \item Each column is its own region.
-    \item Each 2 by 5 rectangle outlined by bold lines is its own region.
-    \item Each 5 by 2 rectangle outlined by dashed lines is its own region.
+	\textbf{(2,5) - Sudoku Pair Puzzle Rules}: Each completed puzzle is a 10 by 10 grid that contains exactly one integer from 1 to 10 in each cell. Furthermore, there are regions that must contain every integer exactly once. The regions are described below and outlined in the puzzle:
+	\begin{enumerate}
+		\item Each row is its own region.
+		\item Each column is its own region.
+		\item Each 2 by 5 rectangle outlined by bold lines is its own region.
+		\item Each 5 by 2 rectangle outlined by dashed lines is its own region.
+	\end{enumerate}
+	\begin{center}
+		Here is an example of a completed puzzle.\par
+		\includegraphics[width=4in]{images/SPPExample.png}
+	\end{center}
+	We've been describing $(2,5)$ Sudoku pair puzzles.  A slightly simpler example would be $(2,3)$ Sudoku pair puzzles.  It might be helpful to warm up on some of these! There is a webpage which will let you practice online:
+
+	\href{http://www2.cedarcrest.edu/academic/math/jmhammer/SudokuWebapp/23SPLS/}{http://www2.cedarcrest.edu/academic/math/jmhammer/SudokuWebapp/23SPLS/}
 \end{enumerate}
 
-\wbnewpage
-\begin{center}
-Here is an example of a completed puzzle.
-        
-    \includegraphics[width=5in]{images/SPPExample.png}
-
-\end{center}
-
-We've been describing $(2,5)$ Sudoku pair puzzles.  A slightly simpler example would be $(2,3)$ Sudoku pair puzzles.  It might be helpful to warm up on some of these! There is a webpage which will let you practice online:
-
-\href{http://www2.cedarcrest.edu/academic/math/jmhammer/SudokuWebapp/23SPLS/}{http://www2.cedarcrest.edu/academic/math/jmhammer/SudokuWebapp/23SPLS/}
-\end{enumerate}
-
-\Instr{ The following pages have Minesweeper games in progress, Nonogram boards, and Sudoku Pair puzzles with answers.\newpage
+\Instr{ The following pages have Minesweeper games in progress, Nonogram boards, KenKen puzzles, and Sudoku Pair puzzles with answers.\newpage
 
     \begin{center}
-        Minesweeper Project Game 1\par
+        Minesweeper Project Game 1\par\bigskip
         \includegraphics[width=5in]{images/MSProject1.png}
     \end{center}
-    
     \newpage
     \begin{center}
-        Minesweeper Project Game 2
-        
-    \includegraphics[width=5in]{images/MSProject2.png}
-      \end{center}
-      
+        Minesweeper Project Game 2\par\bigskip
+		\includegraphics[width=5in]{images/MSProject2.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 3
-        
-    \includegraphics[width=5in]{images/MSProject3.png}
-      \end{center}
-      
+        Minesweeper Project Game 3\par\bigskip
+		\includegraphics[width=5in]{images/MSProject3.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 4
-        
-    \includegraphics[width=5in]{images/MSProject4.png}
-      \end{center}
-      
+        Minesweeper Project Game 4\par\bigskip
+		\includegraphics[width=5in]{images/MSProject4.png}
+    \end{center}  
     \newpage
     \begin{center}
-        Minesweeper Project Game 5
-        
-    \includegraphics[width=5in]{images/MSProject5.png}
-      \end{center}
-      
+        Minesweeper Project Game 5\par\bigskip
+		\includegraphics[width=5in]{images/MSProject5.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 6
-        
-    \includegraphics[width=5in]{images/MSProject6.png}
-      \end{center}
-      
+        Minesweeper Project Game 6\par\bigskip
+		\includegraphics[width=5in]{images/MSProject6.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 7
-        
-    \includegraphics[width=5in]{images/MSProject7.png}
-      \end{center}
-      
+        Minesweeper Project Game 7\par\bigskip
+		\includegraphics[width=5in]{images/MSProject7.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 8
-        
-    \includegraphics[width=5in]{images/MSProject8.png}
-      \end{center}
-      
+        Minesweeper Project Game 8\par\bigskip
+		\includegraphics[width=5in]{images/MSProject8.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 9
-        
-    \includegraphics[width=5in]{images/MSProject9.png}
-      \end{center}
-      
-    
+        Minesweeper Project Game 9\par\bigskip
+		\includegraphics[width=5in]{images/MSProject9.png}
+    \end{center}
     \newpage
     \begin{center}
-        Minesweeper Project Game 10
-        
-    \includegraphics[width=6in]{images/MinesweeperSurrounded.pdf}
-      \end{center}
+        Minesweeper Project Game 10\par\bigskip
+		\includegraphics[width=6in]{images/MinesweeperSurrounded.pdf}
+    \end{center}
 
     \newpage
     \begin{center}
-        Nonogram Project Board 1\par
+        Nonogram Project Board 1\par\bigskip
         \includegraphics[width=5in]{images/nonogram01.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 2\par
+        Nonogram Project Board 2\par\bigskip
         \includegraphics[width=5in]{images/nonogram02.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 3\par
+        Nonogram Project Board 3\par\bigskip
         \includegraphics[width=5in]{images/nonogram03.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 4\par
+        Nonogram Project Board 4\par\bigskip
         \includegraphics[width=5in]{images/nonogram04.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 5\par
+        Nonogram Project Board 5\par\bigskip
         \includegraphics[width=5in]{images/nonogram05.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 6\par
+        Nonogram Project Board 6\par\bigskip
         \includegraphics[width=5in]{images/nonogram06.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 7\par
+        Nonogram Project Board 7\par\bigskip
         \includegraphics[width=5in]{images/nonogram07.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 8\par
+        Nonogram Project Board 8\par\bigskip
         \includegraphics[width=5in]{images/nonogram08.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 9\par
+        Nonogram Project Board 9\par\bigskip
         \includegraphics[width=5in]{images/nonogram09.png}
     \end{center}
     \newpage
     \begin{center}
-        Nonogram Project Board 10\par
+        Nonogram Project Board 10\par\bigskip
         \includegraphics[width=5in]{images/nonogram10.png}
+    \end{center}
+
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 1\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken01a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken01b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 2\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken02a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken02b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 3\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken03a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken03b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 4\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken04a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken04b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 5\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken05a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken05b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 6\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken06a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken06b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 7\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken07a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken07b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 8\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken08a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken08b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 9\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken09a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken09b.png}\vfill
+    \end{center}
+    \newpage
+    \begin{center}
+        KenKen Project Puzzles 10\par\bigskip
+        \includegraphics[width=2.8in]{images/kenken10a.png}\vfill
+        \includegraphics[width=4.2in]{images/kenken10b.png}\vfill
     \end{center}
 
 \newpage
