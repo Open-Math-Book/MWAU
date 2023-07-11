@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: printenv
-      run: which pdflatex
+      run: /usr/bin/which pdflatex
       
   build:
 
