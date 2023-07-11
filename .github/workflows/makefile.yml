@@ -12,6 +12,7 @@ jobs:
     steps:
     - name: printenv
       run: echo $PATH
+      run: which pdflatex
       
   build:
 
