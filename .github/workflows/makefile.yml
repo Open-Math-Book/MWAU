@@ -7,10 +7,17 @@ on:
     branches: [ "main" ]
 
 jobs:
+  explore:
+    runs-on: ubuntu-latest
+    steps:
+    - name: printenv
+      run: echo $PATH
+      
   build:
 
     runs-on: ubuntu-latest
 
+    env: 
     steps:
     - uses: actions/checkout@v3
 
