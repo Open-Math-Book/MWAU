@@ -6,7 +6,7 @@
     <Group>
       <Shape>
         <PointSet>
-          <Coordinate DEF='pts' point='0 0 2  1.732 0 -1  -.866 -1.5 -1  -.866 1.5 -1 '/>
+          <Coordinate DEF='pts' point='0 0 3  2.828 0 -1  -1.414 -2.449 -1  -1.414 2.449 -1 '/>
         </PointSet>
       </Shape>
       <Shape>
