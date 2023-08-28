@@ -246,198 +246,65 @@ Having students articulate aspects of their solution and the problem constraints
             \includegraphics[scale=0.3]{images/Tree-FifteenDollars.pdf}
         \end{center}
     }
-\end{enumerate}
-
-\begin{enumerate}
-    \setcounter{enumi}{1}
-    \item Solve \textbf{ONE} of the following problems using a tree diagram. Your solution must include (i) the tree diagram, (ii) the answer, and (iii) a few sentences describing why you believe your tree diagram gives the correct answer (shows all the answers and no repeats).
-    \begin{enumerate}
-        \item At Panera Bread, you are presented with the following lunch choices: a starter of soup or salad; 3 different sandwiches; and a side of bread, chips, or an apple. How many different lunches consisting of one starter, one sandwich, and one side can be made?
+ 
+    \item At Panera Bread, you are presented with the following lunch choices: a starter of soup or salad; 3 different sandwiches; and a side of bread, chips, or an apple. How many different lunches consisting of one starter, one sandwich, and one side can be made?
         \par\Instr{ There are 18. This one can be calculated using the multiplication principle: $2\times 3\times 3=18$.
             \begin{center}
                 \includegraphics[scale=0.3]{images/Tree-Panera.pdf}
             \end{center}
         }
-        \item At Domino's Pizza, the following unusual vegetable toppings are available: jalapeno peppers, roasted red peppers, spinach, and basil. How many different unusual veggie pizzas can you make using these toppings?
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%
+% Project %
+%%%%%%%%%%%%%%%
+\newpage
+\section{Project Choices}
+
+\begin{enumerate}
+\item How many different ways can you make \$30 in US bills? Provide a tree diagram to support your claim and write a statement about how you used results from the \$20 class activity to find your answer.
+
+\par\Instr{ One may initially think that you can multiply the number of ways to make \$10 by the number of ways to make \$20. However that drastically over counts the possibilities because the tree diagram resulting from this method would not produce unique branches.
+    \par
+    So without some advance counting techniques we will need to use an exhaustive counting method. However we will utilize some information we already have produced above.
+    \par
+    We will partition the solution set into those that have a \$20 bill and those that do not. For those that do have a \$20 bill, we know that we need ten more dollars and so the \$20 bill with all the solutions from question \ref{making10} will produce all 11 of the collections of bills containing a \$20 bill that add to \$30. 
+    \par
+    The harder part is to find the collection of bills that do not contain a \$20 bill. There are many ways to do this, but we would suggest partitioning this work into those that contain a \$10 bill and those that do not. For those that do, we know there is a \$10 bill so there are \$20 left to account for. Without using a \$20 bill there are 40 ways to make \$20, as we have seen. It is only left to find how many ways there are to make \$30 using only fives, twos, and ones. Making a tree diagram for these collections reveals 58 possibilities.
+    \par
+    Finally we would add all the possibilities from above to get $11+40+58 = 109$ total collections of U.S. bills that make \$30.}
+
+\item At Domino's Pizza, the following unusual vegetable toppings are available: jalapeno peppers, roasted red peppers, spinach, and basil. How many different unusual veggie pizzas can you make using these toppings?
         \par\Instr{ There are 15. The N-N-N-N branch has none of the toppings so does not qualify as an unusual pizza. It is just plain cheese!
             \begin{center}
                 \includegraphics[scale=0.3]{images/Tree-Pizza.pdf}
             \end{center}
         }
-    \end{enumerate}
-    
 
-    \item Solve \textbf{ONE} of the following problems using a tree diagram.
-    \begin{enumerate}
-        \item The division championship in major league baseball goes to the winner of a best-of-5 series. The first team to win 3 games wins the division, so the series will never go more than 5 games. For example, if the teams are Boston and Tampa Bay (as they were in the 2021 American League Division Series), one way it could have unfolded was B-T-B-T-T, meaning Boston won the first, Tampa Bay won second, Boston won the third, and then Tampa Bay won the fourth and fifth games. It also could have unfolded T-B-B-B (and this is what actually happened in 2021). How many different ways could the division series have unfolded (including the two already mentioned)?
+ \item The division championship in major league baseball goes to the winner of a best-of-5 series. The first team to win 3 games wins the division, so the series will never go more than 5 games. For example, if the teams are Boston and Tampa Bay (as they were in the 2021 American League Division Series), one way it could have unfolded was B-T-B-T-T, meaning Boston won the first, Tampa Bay won second, Boston won the third, and then Tampa Bay won the fourth and fifth games. It also could have unfolded T-B-B-B (and this is what actually happened in 2021). How many different ways could the division series have unfolded (including the two already mentioned)?
         \par\Instr{ There are 20.
             \begin{center}
                 \includegraphics[scale=0.3]{images/Tree-DivisionSeries.pdf}
             \end{center}
         }
-        \item The curator at a natural history museum is designing a penguin display. He would like to put penguins of 4 different species in the display---Emperor, Northern Rockhopper, Macaroni, and African---arranged one next to the other in a row. However, he wants to be sure the Emperor Penguin is not next to the Macaroni Penguin. How many ways can he arrange the penguins in the display?
+
+\item The curator at a natural history museum is designing a penguin display. He would like to put penguins of 4 different species in the display---Emperor, Northern Rockhopper, Macaroni, and African---arranged one next to the other in a row. However, he wants to be sure the Emperor Penguin is not next to the Macaroni Penguin. How many ways can he arrange the penguins in the display?
         \par\Instr{ There are 12.
             \begin{center}
                 \includegraphics[scale=0.3]{images/Tree-Penguins.pdf}
             \end{center}
         }
     \end{enumerate}
-\end{enumerate}
 
-%%%%%%%%%%%%%%%
-% New Section %
-%%%%%%%%%%%%%%%
-\newpage
-\section{Activity: Crossing the Bridge}
 
-\Instr{  
-Goals for this activity:
-\begin{packedItem}
-\item develop problem solving and sense making; 
-\item introduction to tree diagrams; and
-\item using natural logical arguments (such as quantifiable bounding, negations, case arguments, etc.).
-\end{packedItem}
 
-Especially at the beginning of the course, it is important to make sure that the students understand the constraints of the problem; so, as a class, take some time to read the question and discuss the requirements. Some students may prefer to use manipulatives to solve this problem. Different sized blocks could be used to represent each person, and you also may want a small block for the flashlight. 
 
-You may want to have the students act out their solutions. If so, it helps if each person holds a sign indicating their weight so that the rest of the class can check to see that each movement is ``legal.'' You could even ask one of the groups secretly to make a mistake on purpose to see if the other students were paying attention. }
-
-%<*logicProblems:crossBridge:intro2>
-\indent {\bf A}lfred, {\bf B}ruce, {\bf C}athy, and {\bf D}oug were coming back to their village in the middle of the night. The tiny bridge to the town is too small for more than $2$ people to cross it at the same time, and it is only safe to cross if someone is holding a flashlight. Since they only brought one flashlight, someone will have to return with the flashlight before two more people can cross. Doug can walk across the bridge in $10$ minutes, Cathy takes $5$ minutes to cross, Bruce can skip across in $2$ minutes, and Alfred can cross the bridge in $1$ minute. Unfortunately, when you walk across the bridge with someone else, you can only cross the bridge at the speed of the slower person. What is the least amount of time needed to get everyone across the bridge?
-\begin{enumerate}
-\item \textbf{Understand the Problem:} Act out the situation. Members of your group will play the roles of Alfred, Bruce, Cathy, and Doug. If you are a group of 3, you will only be able to play Alfred, Bruce, and Cathy. Use a prop for the flashlight and define a physical space in the classroom that will stand in as the bridge. Play act until you have successfully gotten everyone across the bridge. Are the rules clear?
-\item \textbf{Devise a plan:} Solve a simpler problem first. Imagine Doug is ill and therefore not with the group. What is the quickest way for Alfred, Bruce, and Cathy to get across the bridge?
-\par\Instr{ 8 minutes. The most efficient way for the three to cross is to have Alfred escort Bruce and Cathy one at a time across the bridge. The two trips take 2 minutes and 5 minutes (with Alfred being held back to the slower speed each time. After delivering one of them Alfred has to make the trip back to retrieve the other. This trip takes 1 minute as Alfred is on his own. The total time for the three trips is 8 minutes.}
-\wbvfill
-\item How do you know this is the quickest way? Construct a tree diagram of all the ways they can cross the bridge without any obvious waste of time (repeating a position---going from one position to another and then back to the position you were before---is an obvious waste of time).
-\par\Instr{ Two ways of the six total are optimal.
-    \begin{center}
-    \includegraphics[width=4.5in]{images/Bridge-ABC.pdf}
-    \end{center}
-}
-\wbvfill\wbvfill
-\item For each way of crossing the bridge, calculate the total time. What is the least? How can it be done? Are there more ways than one?
-\wbvfill\wbnewpage
-\item\label{19min} \textbf{Carry out the plan.} Now return to the original problem and use the same process as you used for the simpler problem. What is the least amount of time needed to get everyone across the bridge? How can it be done?
-%</logicProblems:crossBridge:intro2>
-
-\Instr{ The most common answer for this problem is to make Alfred cross with each person and come back with the torch each time. In this way it will take $10$ minutes for Doug to cross with Alfred and $1$ minute for Alfred to return with the torch. Then it will take $5$ minutes for Cathy to get across the bridge with Alfred and $1$ minute for Alfred to return again. Finally, it takes $2$ minutes for Bruce to get across with Alfred. By adding all the times together it will take a total of $10+1+5+1+2=19$ minutes.
-
-There is a quicker way. The students may discover it while they try to justify their claim that $19$ minutes is the fastest time in Question~{\normalfont\ref{quicker}}. If they get stuck, ask them, 
-
-\begin{minipage}[H]{5.75in}
-\tt \em
-\begin{center}
-{``Is there a way you can hide Cathy?'' }
-\end{center}
-\end{minipage}
-
-Some students may try to send Doug and Cathy across first after asking the above question. This is fine and they should quickly discover that this is not the fastest method. 
-
-This will hopefully get them to realize that if you have Doug and Cathy walk over together, you do not have to make Cathy walk over with someone faster than her. They will also notice that this can not be the first people across if we are looking for a faster time. The first people to go over the bridge would be Alfred and Bruce and then have Bruce come back which will take $4$ minutes round trip. Next, Doug and Cathy walk across together which will take $10$ minutes. Now Alfred will head back with the torch which will add another minute. Finally, Alfred and Bruce will walk across the bridge in $2$ minutes. Adding all the times together the total time is $2+2+10+1+2=17$ minutes. This is the fastest possible time.}
-
-\wbvfill
-%<*logicProblems:crossBridge:quicker>
-\item\label{quicker} \textbf{Review.} Why is there no quicker way to get everyone across? Thoroughly explain your answer.
-%</logicProblems:crossBridge:quicker>
-
-\Instr{  %
-To answer this, you need a systematic way to list all possibilities. It is possible that the students reach this question believing that $19$ minutes is the least amount of time to get everyone across. So it is important to spend some time exhausting other possibilities until they discover the $17$ minute version shown above.
-
-Convincing themselves that $17$ minutes is the least amount of time possible may be a difficult task, but many observations can be made such as:
-\begin{itemize}
-\item There must be at least $5$ trips made across the bridge.
-\item Each person must go across at least once. (So for example, since Doug must cross at some time, more than $10$ minutes will be needed.)
-\item If Cathy and Doug travel together first then one of them must return with the flashlight.
-\end{itemize}
-We can make some obvious bounds from a number of these observations, but using a tree diagram\index{tree diagram} is a good way to exhaust all possibilities. Tree diagrams will be discussed later in greater detail and are an important tool to use in systematic counting scenarios. 
-
-Each tree begins with a ``Start'' position,  from which six edges are drawn, each representing one of the pairs of people crossing the bridge (see Figure~{\normalfont\ref{startTree}}, where AB means that Alfred and Bruce crossed the bridge). 
-Then for each such pair, an edge is drawn to represent who is returning across the bridge with the flashlight as in Figure~{\normalfont\ref{returnTree}}.
-Continuing this process for the top branch yields Figure~{\normalfont\ref{alfredBruce}}.
-Developing this top branch in class, then assigning at least one of the remaining five branches for homework may be appropriate.
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}(\alph{bluefigure})} 
- \setcounter{bluefigure}{1}
-\addtocounter{figure}{-1}
-%\addtocounter{bluefigure}{1}
-
-\begin{figure}[htb]
-\begin{minipage}[b]{0.45\linewidth}
-\begin{center}
-\includegraphics[width=.8in]{images/startTree.pdf}
-\end{center}
-\caption{ Every possible pair of people who could\\be the first to cross the bridge}\label{startTree}
-\end{minipage}
-\hspace{0.5cm}
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}(\alph{bluefigure})} 
-% \setcounter{bluefigure}{1}
-\addtocounter{figure}{-1}
-\addtocounter{bluefigure}{1}
-\begin{minipage}[b]{0.3\linewidth}
-\begin{center}
-\includegraphics[width=1.8in]{images/returnTree.pdf}
-\end{center}
-\caption{Every possible return trip after the initial trip\\across the bridge including the time since Start.}\label{returnTree}
-\end{minipage}
-\end{figure}
-
-% \begin{figure}[htb]
-% \begin{center}
-% \includegraphics[width=1.5in]{startTree.pdf}
-% \end{center}
-% \caption\Instr{  Every possible pair of people who could be the first to cross the bridge}\label{startTree}
-% \end{figure}
-% \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}(\alph{bluefigure})} 
-% % \setcounter{bluefigure}{1}
-% \addtocounter{figure}{-1}
-% \addtocounter{bluefigure}{1}
-% \begin{figure}[htb]
-% \begin{center}
-% \includegraphics[width=2in]{images/returnTree.pdf}
-% \end{center}
-% \caption\Instr{  Every possible return trip after the initial trip across the bridge including the time since Start}\label{returnTree}
-% \end{figure}
-
-\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}(\alph{bluefigure})} 
-% \setcounter{bluefigure}{1}
-\addtocounter{figure}{-1}
-\addtocounter{bluefigure}{1}
-\begin{figure}[htb]
-\begin{center}
-\includegraphics[width=3.4in]{images/alfredBruce.pdf}
-\end{center}
-\caption{ The entire solution tree for when Alfred and Bruce cross first}\label{alfredBruce}
-\end{figure}
-
-Students may want to keep a running total of the time taken along each branch as they construct the tree (see Figure~{\normalfont\ref{returnTree}}), or they may prefer to label each edge with the time. Then, if ever a branch reaches more than $17$ minutes (or whatever lowest total they have identified so far), they need not complete this branch since it cannot produce a faster time (this is called pruning the tree).
-}
-
-\wbvfill
-%<*logicProblems:crossBridge:4minBruce>
-\item\label{4minBruce} It turns out that Bruce stubbed his toe on the way to the bridge and will actually take $4$ minutes to cross the bridge. Now how long would it take for everyone to get across the bridge?
-%</logicProblems:crossBridge:4minBruce>
-
-\Instr{ If we use the optimal method discussed in Question~{\normalfont\ref{19min}} we find that it takes $23$ minutes for the party to cross the bridge. It is easy to see that we must replace each $2$ in the calculation of Question~{\normalfont\ref{19min}} with a $4$, and since Bruce crossed the bridge $3$ times this adds $6$ minutes to the total time. However, if we use the first method discussed where Alfred went across all five times and escorted each team member we notice Bruce only crossed the bridge once. Therefore we only need to add $2$ minutes to the total time in this method producing a total time of $21$ minutes. 
-
-These two problems are carefully chosen to point out that just because a technique works well in one setting does not mean it is always going to be the best method to use.}
-
-\wbvfill
-%<*logicProblems:crossBridge:noQuicker>
-\item  Why is there no quicker way to get everyone across in Question~{\normalfont\ref{4minBruce}}? Thoroughly explain your answer.
-%</logicProblems:crossBridge:noQuicker>
-
-\Instr{  Again we suggest using a tree diagram\index{tree diagram} to exhaust all possible methods to show which method is optimal. 
-}
-
-\wbvfill
-%<*logicProblems:crossBridge:end>
-\end{enumerate}
-%</logicProblems:crossBridge:end>
 
 \newpage
-\section{Project Choices}
+\section{Additional Exercises}
 \begin{enumerate}
-\item \textbf{Project Question:} How many different ways can you make \$50 in US bills? Provide a tree diagram to support your claim and write a statement about how you used results from the \$20 class activity to find your answer.
+\item How many different ways can you make \$50 in US bills? Provide a tree diagram to support your claim and write a statement about how you used results from the \$20 class activity to find your answer.
 \par\Instr{ The problem using coins to make a dollar is widely known, and I can find an answer for making \$50 with change but that number is extremely high because of the use of coins. We are asking for much less and the answer doesn't seem to be immediately available on the net.
 \par
 There are 451:
@@ -899,27 +766,11 @@ There are 451:
 }
 \wbvfill
 
-\item 
 
-\item You need to cross a river in a small rowboat and take your possessions with you.  The boat is only big enough for you and one possession at a time.  Unfortunately, some of your belongings can't be left alone on the river bank while you transport the other.  Your belongings are: a wolf, a goat, and a big bag of cabbage.   Problems: the wolf will eat the goat and the goat will eat the cabbages if they are able to do so.  How do you get everything across?
 
-\wbvfill
 
-\end{enumerate}
-
-\newpage
-\section{Additional Exercises}
-\begin{enumerate}
     \item You're at a meeting where there is a make-your-own-sandwich platter. There is only one kind of bread, but there is a choice of what to put on it. There are three different lunch meats, two different cheeses, and extras—mustard, mayonnaise, and lettuce—to choose from. How many sandwiches can you make using one lunch meat, one cheese and any combination of extras?
     \par\Instr{ Though this question can be answered using the multiplication principle, as in $3\times 2\times 2\times 2\times 2=48$, it is expected students will create a tree diagram. You may wish to use this exercise in class to give students an example of a tree diagram not associated with counting money.}
-    \item How many different ways can you have \$30 in US bills? Make sure to utilize the techniques and strategies you have learned above and pay close attention to work from above that you may be able to re-use.
-    \par\Instr{ One may initially think that you can multiply the number of ways ot make \$10 by the number of ways to make \$20. However that drastically over counts the possibilities because the tree diagram resulting from this method would not produce unique branches.
-    \par
-    So without some advance counting techniques we will need to use an exhaustive counting method. However we will utilize some information we already have produced above.
-    \par
-    We will partition the solution set into those that have a \$20 bill and those that do not. For those that do have a \$20 bill, we know that we need ten more dollars and so the \$20 bill with all the solutions from question \ref{making10} will produce all 11 of the collections of bills containing a \$20 bill that add to \$30. 
-    \par
-    The harder part is to find the collection of bills that do not contain a \$20 bill. There are many ways to do this, but we would suggest partitioning this work into those that contain a \$10 bill and those that do not. For those that do, we know there is a \$10 bill so there are \$20 left to account for. Without using a \$20 bill there are 40 ways to make \$20, as we have seen. It is only left to find how many ways there are to make \$30 using only fives, twos, and ones. Making a tree diagram for these collections reveals 58 possibilities.
-    \par
-    Finally we would add all the possibilities from above to get $11+40+58 = 109$ total collections of U.S. bills that make \$30.}
+
+    
 \end{enumerate}
