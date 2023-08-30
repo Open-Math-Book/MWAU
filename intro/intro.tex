@@ -31,8 +31,7 @@ It is important to emphasize that a natural part of problem solving is temporary
 
 \section{Activity: Manager's Schedule}
 
-\noindent Let's assume you are the manager of some business. This could be any business, such as an advertising firm, a theater troop, or IT department. You have 9 projects that must be completed before your team can go on vacation. You predict that each project will take a day to complete and have assigned the employees needed for each project in the table below. No person can work on two projects in a single day but must be present the entire day the project is being worked on. (Maybe they are in different locations, national safety procedure require this, etc.)  Unfortunately you have to stay until all projects are completed, so you really want to create a schedule that allows yourself to go on vacation ASAP!
-
+\noindent Let's assume you are the manager of some business. This could be any business, such as an advertising firm, a theater troop, or IT department. You have 9 projects that must be completed. You predict that each project will take a day to complete and have assigned the employees needed for each project in the table below. No person can work on two projects in a single day but must be present the entire day the project is being worked on. (Maybe they are in different locations, national safety procedure require this, etc.)  
 \begin{tabular} {| l | l|}
 \hline
 Project Number& Employees assigned\\
@@ -60,7 +59,7 @@ Project Number& Employees assigned\\
 
 \begin{enumerate}
 
-\item \label{firstschedule} Make a first attempt at creating a good project schedule. Don't worry about making it on the fewest number of days yet.
+\item \label{firstschedule} Make a first attempt at creating a project schedule.
 \par\Instr{ We are starting to develop Polya's 4 steps in problem solving without calling them by name. We also want to establish a culture of working together and getting something on paper as soon as we start working. Even if students don't have the full or correct answer, they should right down their first attempt to get something to discuss. (I like to refer to these as a ``productive fail'' - you have a product that may have failed your overall goal, but your are progressing in the problem solving process!)}
  \wbvfill
  
@@ -73,13 +72,14 @@ We suggest at some point when most groups have finished this question to have gr
  \wbvfill
  
  \wbnewpage
-  
-\item Create a way to organize the interactions between the project members. How will you use this information to make a project schedule with the fewest number of days?
+ Unfortunately, you have to stay until all projects are completed and the holidays are quickly approaching. So you really want to create a schedule that allows yourself to go on vacation ASAP!
+
+\item Create a better way to organize the interactions between the projects that can help you to make your schedule. How will you use this organization to make a project schedule with the fewest number of days?
 \par\Instr{After making a schedule and seeing other groups, students should see that they cannot just simply trial and error this process. So we are now asking the students to re-examine the information from the problem and start to devise a plan by identifying all key variables, data, and or structure of the problem.}
  \wbvfill
  
 
-\item \label{trivialmin}Can you easily identify a minimum number of days you will need your team to work? What is your reasoning you cannot finish any sooner?
+\item \label{trivialmin} Using the information you have gathered, can you provide a number of days you know you will need more than to schedule the projects?  What is your reasoning you cannot finish in that many days?
 \par\Instr{Here we are asking student to stop and identify some easy constraints. Often student get to involved in the problem and don't make simple observations or estimates for their desired solution. The simplest observation here is that every employee has been assigned to three projects, so no schedule could ever exist on fewer than three days. There is also an argument, using graph theory, that no schedule on three days can exist, but that is not an observation we expect at this point. }
  \wbvfill
  
@@ -266,6 +266,51 @@ Having students articulate aspects of their solution and the problem constraints
 \section{Project Choices}
 
 \begin{enumerate}
+\item As the manager of a chemical distribution company, your job is to make sure that all of the chemicals your company manufactures are safely stored in warehouses. But your job is not as easy as you may think. Some of the chemicals cannot be in close proximity to some others, so some chemicals cannot be stored together in the same warehouse. Due to the complex chemical names for each of the $7$ chemicals produced, your company just refers to the chemicals as Chemical $1$ through Chemical $7$. To reduce expenses, we want to use as few warehouses as possible. Table~{\normalfont\ref{chemicalConflict}} shows the chemicals that cannot be stored together. Provide a storage arrangement for the chemicals in to the fewest number of warehouses and provide evidence on why your company cannot safely store the chemicals in fewer warehouses than your solution provides.
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Chemical $X$ & Chemicals that cannot be stored with $X$ \\
+\hline
+\hline
+$1$ & $2$, $3$, and $7$ \\
+\hline
+$2$ & $1$, $3$, and $4$ \\
+\hline
+$3$ & $1$, $2$, and $4$ \\
+\hline
+$4$ & $2$, $3$, $5$, and $6$ \\
+\hline
+$5$ & $4$, $6$, and $7$ \\
+\hline
+$6$ & $4$, $5$, and $7$ \\
+\hline
+$7$ & $1$, $5$, and $6$ \\
+\hline
+\end{tabular}
+\end{center}
+\caption{List of the chemicals that cannot be stored together}\label{chemicalConflict}
+\end{table}
+
+\par\Instr{There are several options for storing the chemicals in to four warehouses, one such solution is as follows
+
+\begin{tabular}{|c|c|}
+\hline
+Warehouse & Chemicals\\
+\hline
+A& 1 and 4\\
+\hline
+B& 2 and 5\\
+\hline
+C& 3 and 6\\
+\hline
+D& 7\\
+\hline
+\end{tabular}
+Again, there are many ways to describe why three warehouses is not enough, but one such way is to notice that to reduce the number of warehouses to $3$, at least $1$ of the warehouses would have to store $3$ chemicals. By listing all of the largest lists of chemicals that can be stored in the same warehouse, we see that there is no set of size $3$. So since $7/3 >2$ we know that without a warehouse having $>2$ chemicals we will not be able to store the chemicals in to three warehouses.
+}
+
 \item How many different ways can you make \$30 in US bills? Provide a tree diagram to support your claim and write a statement about how you used results from the \$20 class activity to find your answer.
 
 \par\Instr{ One may initially think that you can multiply the number of ways to make \$10 by the number of ways to make \$20. However that drastically over counts the possibilities because the tree diagram resulting from this method would not produce unique branches.
