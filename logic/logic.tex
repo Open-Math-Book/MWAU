@@ -464,7 +464,7 @@ Goals for this activity:
 }
 
 %<*truthTables:statement:negation:intro2>
-\indent Let $\neg P$ represent the statement\index{statement} ``$P$ is false''. ($\neg P$\index{$\neg$} is called the negation of $P$.) Again we will consider the statements below.
+\indent Let $\neg P$ represent the statement\index{statement} ``not $P$''. For example, if $P$ represents the statement "It is raining." then $\neg P$ represents the statement "It is not raining." $\neg P$\index{$\neg$} is called the negation of $P$. Again we will consider the statements below.
 \begin{center}
 \begin{tabular}{ll}
 $P$: & I am wearing a top hat.\\
@@ -1045,7 +1045,7 @@ In the game Minesweeper sometimes we cannot determine whether a square is a mine
 \wbvfill
 
 \wbnewpage
-\item \label{Minesweeper3} So which is it? Is A the mine? or is B? To figure this out logically, we make A a mine and see what happens. So suppose A is a mine (as if we knew this to be a fact) and determine whether the following statements are true or false.
+\item \label{Minesweeper3} So which is it? Is A the mine? or is B? To figure this out logically, we make A a mine and see what happens. So suppose A is a mine (as if we knew this to be a fact) and determine whether the following statements are true or false. You should be able to explain each one. Use the boards below, which show the same board without the letters, for reference.
 \begin{enumerate}
     \item If A is a mine, then B is clear.
     \par\Instr{ TRUE. The leftmost $1$ requires exactly one of A and B to be a mine.}
@@ -1069,8 +1069,11 @@ In the game Minesweeper sometimes we cannot determine whether a square is a mine
     \par\Instr{ FALSE. The 2 above E is adjacent to D,E,F. Only one of these squares is clear.}
     \wbvfill
 \end{enumerate}
-Now suppose B is a mine (as if we knew this to be a fact) and start over, assuming we don't know anything about any other square to begin. Determine whether the following statements are true or false.
-\begin{enumerate}
+\includegraphics[width=3in]{images/MinesweeperImplication03-A.png} \includegraphics[width=3in]{images/MinesweeperImplication03-A.png}
+
+\wbnewpage
+Now suppose B is a mine (as if we knew this to be a fact) and start over, assuming we don't know anything about any other square to begin. Determine whether the following statements are true or false. You should be able to explain each one. Use the boards below, which show the same board without the letters, for reference.
+\begin{enumerate} \setcounter{enumii}{7}
     \item If B is a mine, then A is clear.
     \par\Instr{ TRUE. The leftmost $1$ requires exactly one of A and B to be a mine.}
     \wbvfill
@@ -1092,6 +1095,7 @@ Now suppose B is a mine (as if we knew this to be a fact) and start over, assumi
     \par\Instr{ FALSE. The 2 is adjacent to D,E,F. Since D is clear, F cannot also be clear.}
     \wbvfill
 \end{enumerate}
+\includegraphics[width=3in]{images/MinesweeperImplication03-B.png} \includegraphics[width=3in]{images/MinesweeperImplication03-B.png}
 
 \wbnewpage
 \item \label{Minesweeper4} According to your answers in question \ref{Minesweeper3}, which do you think is the mine? A or B? Explain.
@@ -1147,7 +1151,7 @@ Now suppose B is a mine (as if we knew this to be a fact) and start over, assumi
          \hline
          G is not a mine. & G is adjacent to the $1$ above the O (which is a mine).\\
          \hline
-         A is a mine or G is a mine & A and G are the only uncleared squares adjacent to the $1$ next to A.\\
+         A is a mine or G is a mine, but not both & A and G are the only uncleared squares adjacent to the $1$ next to A.\\
          \hline
          A is a mine. & The second and third rows (of this table) prove A is a mine.\\
          \hline
@@ -1572,6 +1576,8 @@ $U$: & Nancy is buying food.
         \item Write an argument table for one of the squares marked with an O. \textit{* Do not pick a square located in a ``corner'' adjacent to a square with a $1$. *}
         \item Write an argument table for one of the squares marked with an X.
     \end{enumerate}
+
+    You may want to visit \href{https://freeminesweeper.org/}{https://freeminesweeper.org/} to learn or practice the game.
     
     \item \textbf{Project Question:} You are given an empty nonogram board. Your project is to do the following.
     \begin{enumerate}
@@ -1640,14 +1646,14 @@ $U$: & Nancy is buying food.
 		Here is an example of a completed puzzle.\par
 		\includegraphics[width=4in]{images/23SPPExample.png}
 	\end{center}
-	We've been describing $(2,3)$ Sudoku pair puzzles.  A slightly harder example would be $(2,5)$ Sudoku pair puzzles. There are many variations of these puzzles that were originally designed by Dr. James Hammer in 2012. We have these puzzles on our webpage (https://open-math-book.github.io/MWAU/) that will allow you to generate and practice on multiple games. 
+	We've been describing $(2,3)$ Sudoku pair puzzles.  A slightly harder example would be $(2,5)$ Sudoku pair puzzles. There are many variations of these puzzles that were originally designed by Dr. James Hammer in 2012. We have these puzzles on our webpage (\href{https://open-math-book.github.io/MWAU/23spp/index.html}{https://open-math-book.github.io/MWAU/23spp/index.html} for the $(2,3)$ Sudoku pair puzzles) that will allow you to generate and practice on multiple games. 
 	
-	Fully complete a puzzle and provide a paragraph description of how you used logic to complete the puzzle, using examples from your specific game.
+	You project is to complete a $(2,3)$ Sudoku pait puzzle and write a description of how you used logic to complete the puzzle, using examples from your specific game.
 	
-	\Instr{We have provided versions of the $(2,5)$ Sudoku pair puzzles, but those are often too hard for these students, so you may suggest that they complete a $(2,3)$ version and save as a printed version for there project description.}
+	\Instr{The $(2,5)$ Sudoku pair puzzles are often too hard for these students, so you may ask them to complete a $(2,3)$ version only.}
 \end{enumerate}
 
-\Instr{ The following pages have Minesweeper games in progress, Nonogram boards, KenKen puzzles, and Sudoku Pair puzzles with answers.\newpage
+\Instr{ The following pages have Minesweeper games in progress, Nonogram boards, KenKen puzzles, and Sudoku Pair puzzles, some with answers.\newpage
 
     \begin{center}
         Minesweeper Project Game 1\par\bigskip
@@ -1813,16 +1819,92 @@ $U$: & Nancy is buying food.
 
 \newpage
 \begin{center}
-        (2,5) - Sudoku Pair Puzzle 1
+        (2,3) - Sudoku Pair Puzzle 1
         
-    \includegraphics[width=5in]{images/SPP1.png}
+    \includegraphics[width=5in]{images/SPP23-01.png}
       \end{center}
 
 \newpage
 \begin{center}
-        (2,5) - Sudoku Pair Puzzle Solution 1
+        (2,3) - Sudoku Pair Puzzle 2
         
-    \includegraphics[width=5in]{images/SPP1Solved.png}
+    \includegraphics[width=5in]{images/SPP23-02.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 3
+        
+    \includegraphics[width=5in]{images/SPP23-03.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 4
+        
+    \includegraphics[width=5in]{images/SPP23-04.png}
+      \end{center}
+
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 5
+        
+    \includegraphics[width=5in]{images/SPP23-05.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 6
+        
+    \includegraphics[width=5in]{images/SPP23-06.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 7
+        
+    \includegraphics[width=5in]{images/SPP23-07.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 8
+        
+    \includegraphics[width=5in]{images/SPP23-08.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 9
+        
+    \includegraphics[width=5in]{images/SPP23-09.png}
+      \end{center}
+
+
+\newpage
+\begin{center}
+        (2,3) - Sudoku Pair Puzzle 10
+        
+    \includegraphics[width=5in]{images/SPP23-10.png}
+      \end{center}
+
+
+
+
+
+\newpage
+\begin{center}
+        (2,5) - Sudoku Pair Puzzle 1
+        
+    \includegraphics[width=5in]{images/SPP1.png}
       \end{center}
 
 \newpage
@@ -1899,6 +1981,13 @@ $U$: & Nancy is buying food.
       \end{center}
 
 
+
+\newpage
+\begin{center}
+        (2,5) - Sudoku Pair Puzzle Solution 1
+        
+    \includegraphics[width=5in]{images/SPP1Solved.png}
+      \end{center}
 
 \newpage
 \begin{center}
