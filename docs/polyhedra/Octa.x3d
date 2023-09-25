@@ -2,18 +2,19 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-    <WorldInfo info='Copyright (c) 2023 by Joseph E. Fields' title='Cube'/>
+    <WorldInfo info='Copyright (c) 2023 by Joseph E. Fields' title='Octahedron'/>
+    <Viewpoint position="-0.75 0.30 4.25" orientation="-0.37 -0.92 0.02 0.19" zNear="2.0" zFar="7.33" centerOfRotation="0.0 0.0 0.0" firldOfView="0.785" description="default"></Viewpoint>
     <Group>
       <Shape>
         <PointSet>
-          <Coordinate DEF='pts' point='1 1 1  -1 1 1  -1 -1 1  1 -1 1  1 1 -1  -1 1 -1  -1 -1 -1  1 -1 -1'/>
+          <Coordinate DEF='pts' point='0 0 1  0 1 0  1 0 0  0 -1 0  -1 0 0  0 0 -1 '/>
         </PointSet>
       </Shape>
       <Shape>
         <Appearance>
           <Material diffuseColor='1 0 0' transparency='0.25'/>
         </Appearance>
-        <IndexedFaceSet coordIndex='0 1 2 3  -1 0 3 7 4 -1 0 4 5 1 -1 2 1 5 6 -1 3 2 6 7 -1 4 7 6 5 -1'>
+        <IndexedFaceSet coordIndex='0 2 1  -1  0 1 4  -1  0 4 3  -1  0 3 2  -1  5 1 2  -1  5 4 1  -1  5 3 4  -1  5 2 3  -1'>
           <Coordinate USE='pts'/>
         </IndexedFaceSet>
       </Shape>  
@@ -21,11 +22,11 @@
         <Appearance>
           <Material diffuseColor='0 0 0'/>
         </Appearance>
-        <IndexedLineSet coordIndex='0 1 -1 1 2 -1 2 3 -1 3 0 -1 0 4 -1 1 5 -1 2 6 -1 3 7 -1 4 5 -1 5 6 -1 6 7 -1 7 4 -1'>
+        <IndexedLineSet coordIndex='0 1 -1 0 2 -1 0 3 -1 0 4 -1 1 4 -1 4 3 -1 3 2 -1 2 1 -1 4 5 -1 3 5 -1 2 5 -1 1 5 -1'>
           <Coordinate USE='pts'/>
         </IndexedLineSet>
       </Shape>
-      <Transform translation='1 1 1'>
+      <Transform translation='0 0 1'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>
@@ -33,7 +34,7 @@
             <Sphere radius='0.03'/>
           </Shape>
       </Transform>
-      <Transform translation='-1 1 1'>
+      <Transform translation='0 1 0'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>
@@ -41,7 +42,7 @@
             <Sphere radius='0.03'/>
           </Shape>
       </Transform>
-      <Transform translation='-1 -1 1'>
+      <Transform translation='1 0 0'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>
@@ -49,7 +50,7 @@
             <Sphere radius='0.03'/>
           </Shape>
       </Transform>
-      <Transform translation='1 -1 1'>
+      <Transform translation='0 -1 0'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>
@@ -57,7 +58,7 @@
             <Sphere radius='0.03'/>
           </Shape>
       </Transform>
-      <Transform translation='1 1 -1'>
+      <Transform translation='-1 0 0'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>
@@ -65,23 +66,7 @@
             <Sphere radius='0.03'/>
           </Shape>
       </Transform>
-      <Transform translation='-1 1 -1'>
-          <Shape>
-            <Appearance>
-              <Material diffuseColor='0 0 0'/>
-            </Appearance>
-            <Sphere radius='0.03'/>
-          </Shape>
-      </Transform>
-      <Transform translation='-1 -1 -1'>
-          <Shape>
-            <Appearance>
-              <Material diffuseColor='0 0 0'/>
-            </Appearance>
-            <Sphere radius='0.03'/>
-          </Shape>
-      </Transform>
-      <Transform translation='1 -1 -1'>
+      <Transform translation='0 0 -1'>
           <Shape>
             <Appearance>
               <Material diffuseColor='0 0 0'/>

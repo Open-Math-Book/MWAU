@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
+<X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
+  <Scene DEF='scene'>
+    <WorldInfo info='Copyright (c) 2023 by Joseph E. Fields' title='Dodecahedron'/>
+    <Group>
+      <Shape>
+        <PointSet>
+          <Coordinate DEF='pts' point='0 0 1.070  0.714 0 0.798  -0.357 0.618 0.798  -0.357 -0.618 0.798  0.798 0.618 0.357  0.798 -0.618 0.357  -0.934 0.382 0.357  0.136 1 0.357   0.136 -1 0.357  -0.934 -0.382 0.357  0.934 0.382 -0.357  0.934 -0.382 -0.357  -0.798 0.618 -0.357  -0.136 1 -0.357  -0.136 -1 -0.357  -0.798 -0.618 -0.357  0.357 0.618 -0.798  0.357 -0.618 -0.798  -0.714 0 -0.798  0 0 -1.070'/>
+        </PointSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='0 0 0'/>
+        </Appearance>
+        <IndexedLineSet coordIndex='0 1 -1 0 2 -1 0 3 -1 1 4 -1 1 5 -1 2 6 -1 2 7 -1 3 8 -1 3 9 -1 4 7 -1 4 10 -1 5 8 -1 5 11 -1 6 9 -1 6 12 -1 7 13 -1 8 14 -1 9 15 -1 10 11 -1 10 16 -1 11 17 -1 12 13 -1 12 18 -1 13 16 -1 14 15 -1 14 17 -1 15 18 -1 16 19 -1 17 19 -1 18 19 -1'>
+          <Coordinate USE='pts'/>
+        </IndexedLineSet>
+      </Shape>
+      <Shape>
+        <Appearance>
+          <Material diffuseColor='1 0 0' transparency='0.25'/>
+        </Appearance>
+        <IndexedFaceSet coordIndex=' 0 2 6 9 3 -1  0 3 8 5 1 -1  0 1 4 7 2 -1  1 5 11 10 4 -1  2 7 13 12 6 -1  3 9 15 14 8 -1  5 8 14 17 11 -1  4 10 16 13 7 -1  6 12 18 15 9 -1  10 11 17 19 16 -1  14 15 18 19 17 -1  12 13 16 19 18 -1'>
+          <Coordinate USE='pts'/>
+        </IndexedFaceSet>
+      </Shape>
+      <Transform translation='0 0 1.07'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.714 0 0.798'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.357 0.618 0.798'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.357 -0.618 0.798'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.798 0.618 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.798 -0.618 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.136 1 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.934 0.382 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+            <Transform translation='0.136 -1 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.934 -0.382 0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>  
+      <Transform translation='0.934 0.382 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.934 -0.382 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.798 0.618 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.136 1 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.136 -1 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='-0.798 -0.618 -0.357'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0.357 0.618 -0.798'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform> 
+      <Transform translation='0.357 -0.618 -0.798 '>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform> 
+      <Transform translation='-0.714 0 -0.798'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+      <Transform translation='0 0 -1.070'>
+          <Shape>
+            <Appearance>
+              <Material diffuseColor='0 0 0'/>
+            </Appearance>
+            <Sphere radius='0.03'/>
+          </Shape>
+      </Transform>
+    </Group>
+  </Scene>
+</X3D>
