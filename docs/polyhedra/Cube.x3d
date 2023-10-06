@@ -3,6 +3,7 @@
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
     <WorldInfo info='Copyright (c) 2023 by Joseph E. Fields' title='Cube'/>
+    <Viewpoint position="-0.75 0.30 4.25" orientation="-0.37 -0.92 0.02 0.19" zNear="2.0" zFar="7.33" centerOfRotation="0.0 0.0 0.0" fieldOfView="0.785" description="default"></Viewpoint>
     <Group>
       <Shape>
         <PointSet>
