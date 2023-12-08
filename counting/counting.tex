@@ -8,6 +8,9 @@
 \setcounter{section}{-1}
 \section{Mathematical Outcome}
 
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.5}
+
 %<*discreteCounting.mathOut1a1>
 Activity~{\normalfont\ref{careful}} focuses on developing a method to quickly count large numbers of related objects. This method of counting is called the Fundamental Counting Principle\index{Fundamental Counting Principle}. Before we describe this principle we must first define necessary terminology.
 \begin{definition}
@@ -1179,8 +1182,8 @@ $n$ & $m$ (with $m\leq n$) & $n\times (n-1)\times \cdots \times(n-m+1)$\\
 \Instr{  
 Goals for this activity:
 \begin{packedItem}
-\item Using a list method to detremine the number of combination; and
-\item developing a abstract formula for combinations.
+\item Using a list method to determine the number of combinations; and
+\item developing an abstract formula for combinations.
 \end{packedItem}
 }
 
@@ -1192,9 +1195,9 @@ Goals for this activity:
 Imagine you are working in a small business with four people (say Alice, Bob, Charlie, and you) and many of the projects your business needs to complete require partners to work together. 
 
 \begin{enumerate}
-\item \label{YouPartners} How many different partners could you possible work with on a project? List all the partnerships you can be apart of.
+\item \label{YouPartners} How many different partners could you possible work with on a project? List all the pairs of people you can be part of.
 
-\Instr{  Obviously there are three other people so you could be matched with any of the three people forming three different partnerships.
+\Instr{  Obviously there are three other people so you could be matched with any of the three people forming three different pairs.
 
 You and Alice are a partnership.
 
@@ -1251,7 +1254,7 @@ Bob and Charlie \\
 %</perm:SelectingaJury:intro>
 \begin{enumerate}
 %<*perm:SelectingaJury:combolist>
- \item\label{combolist} Describe several methods to make a list of the possible juries. Make sure your methods do not miss nor duplicate any juries!
+ \item\label{combolist} Describe several methods you could use to list all the possible juries. For each method, demonstrate how it leads to a few of the possible juries. You do not have to find all the juries yet, just make a plan! Do your methods ensure you will not miss or duplicate any juries!
 %</perm:SelectingaJury:combolist>
 
 \Instr{  Students should think of ways to list out each combination\index{combination}. For example, they could make an alphabetical listing using the first letters of each person's name. They may come up with some other technique. Using a tree diagram\index{tree diagram} works well, and could be encouraged. See Question~{\normalfont\ref{organization}} for the list of all the different possible juries of size $3$ from $7$ people.}
@@ -1259,14 +1262,14 @@ Bob and Charlie \\
 \wbvfill
 
 %<*perm:SelectingaJury:comboproc>
- \item\label{comboproc} Which of your lists from Question~{\normalfont\ref{combolist}} is organized in a way that is easy to count? If none, come up with a way to organize the list so it is easy to count.
+\item\label{comboproc} Which of your methods from Question~{\normalfont\ref{combolist}} is organized in a way that is easy to complete and easy to count? If none, come up with a way an organization of the procedure so it is easy to complete and count. Again, you do not have to complete the list of juries yet. This is still planning. Which of your methods seems to hold the most promise?
 %</perm:SelectingaJury:comboproc>
 
 \Instr{  Here they may want to group the juries together which have certain properties. One example is to begin by listing all the juries that include the first person. This gives rise to a recursive procedure, because the only juries left to count are all the juries that can be made from the remaining $6$ people.}
 \wbvfill
 
 %<*perm:SelectingaJury:organization>
- \item\label{organization} Is each jury represented through the organization process given in Question~{\normalfont\ref{comboproc}}? Explain your results. List all the possibilities, choosing an approach that makes it clear that each $3$-person jury is included exactly once. How many juries did you find?
+ \item\label{organization} Use the method with the most promise to list all the possibilities. Use the aapproach that makes it clear that each $3$-person jury is included exactly once. How many juries did you find?
 %</perm:SelectingaJury:organization>
 
 \Instr{  The students should now check to make sure they have not missed any possible combinations\index{combination} (juries). Also verify that the organization process does produce each possible outcome. Table~{\normalfont\ref{comboLetters}} gives one such list of the $35$ possible juries using the first letters of each of their names.
@@ -1295,7 +1298,7 @@ AEG && &&  &&  &&  \\
 AFG && &&  &&  &&  \\
 \end{tabular}
 \end{center}
-\caption{A list of all possible seatings using the first letters of each name}\label{comboLetters}
+\caption{A list of all possible juries using the first letters of each name}\label{comboLetters}
 \end{table}
 
 The students may notice that the number of entries in each column matches the number of rectangles in a $1\times n$ array they found in Activity~{\normalfont\ref{recursion}}. You could challenge the students to find a reason why they are the same. For example, to use rectangles to count the number of entries in the first column of Table~{\normalfont\ref{comboLetters}}, start by recognizing that they all contain A, so only the other two letters must be chosen. Assign those $6$ letters to the $6$ cells in the $1\times 6$ array:
@@ -1360,7 +1363,7 @@ Here the students should recognize this is the same number of combinations (juri
 \end{center}
 \end{minipage}
 
-Each combination\index{combination} of $3$ jurors left out $4$ of the $7$, so another way to look at this is to count each combination as those that were left out. Here we see it is obvious that selecting $3$ jurors produces the same number of combinations as selecting $4$ jurors.}
+Each combination\index{combination} of $3$ jurors left out $4$ of the $7$, so another way to look at this is to count each combination as those that were left out. Here we see it is obvious that selecting $3$ jurors produces the same number of combinations as selecting $4$ jurors. In this way, the $3$-person juries and $4$-person juries selected from $7$ people are dual to one another.}
 
 \wbvfill
 
@@ -1391,7 +1394,7 @@ $7$ & \\
 \end{center}
 %</perm:SelectingaJury:allcombinations>
 
-\Instr{  Hopefully the students will find some easy methods to listing and organizing the possible juries. Also with the relationship established in Question~{\normalfont\ref{3outof10}}, they should know that selecting $1$ person is the same as selecting $6$ people, selecting $2$ people is the same as selecting $5$ people, and selecting $3$ people is the same as selecting $4$ people. 
+\Instr{  Hopefully the students will very easily fill in the lines for $1$ and $7$ jurors. Also with the relationship established in Question~{\normalfont\ref{3outof10}}, they should know that selecting $1$ person is the same as selecting $6$ people and selecting $2$ people is the same as selecting $5$ people. They should also recognize that previous exercises allow them to fill in the lines for $3$- and $4$-person juries. That leaves only the task of figuring out the number of $2$-person and $5$-person juries, which will be the same, so they really only have to figure one of these out.
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -1425,7 +1428,7 @@ Mayor Catie was thinking about the number of $3$-person juries she could select 
 
 \begin{enumerate}
 \setcounter{enumi}{5}
-\item\label{permutation} What would happen to the number of different juries if the jury selected is to be seated in a certain order? For example, if Alice sits in the left seat, Bob sits in the middle seat and Charlie sits in the right seat, it is a different jury to if Bob sits in the left seat, Alice sits in the middle seat and Charlie sits in the right seat. How many different {\em ordered} jury seatings are there if $3$ jurors out of $7$ people are to be seated?
+\item\label{permutation} What would happen to the number of different juries if the jury selected is to be seated in a certain order? For example, if Alice sits in the left seat, Bob sits in the middle seat, and Charlie sits in the right seat, it is a different jury from the one where Bob sits in the left seat, Alice sits in the middle seat, and Charlie sits in the right seat. How many different {\em ordered} jury seatings are there if $3$ jurors out of $7$ people are to be seated?
 %</perm:SelectingaJury:permutation>
 
 \Instr{  It may not be obvious to the students, but this question is the same type of problem as in Activity~{\normalfont\ref{raceselection}}. It may help the students to ask 
@@ -1866,7 +1869,8 @@ by finding all the rhythms in the world on a small number of counts and build up
 		\hline
 		\end{tabular}
 	\end{center}
-	Left empty are rhythms that are impossible.
+	Left empty are rhythms that are impossible.\par
+	There is symmetry in the table that might be discovered, but also might need prompting. For $n$ count rhythms, there are the same number of $k$-strike rhythms as there are $(n-k)$-strike rhythms. This follows because each $k$-strike rhythm must have $n-k$ rests. Simply swapping symbols for strikes and rests results in an $(n-k)$-strike rhythm, and vice-versa. There is a one-to-one correspondence between them, so there are the same number of each. See, for example, the numbers of rhythms for 2 strikes and 4 strikes on 6 counts. In this way, the 2-strike rhythms and 4-strike rhythms on 6 counts are \textbf{dual} to one another.
 	}
 \end{enumerate}
 
@@ -1904,12 +1908,14 @@ by finding all the rhythms in the world on a small number of counts and build up
 	\end{center}
 	A music box like the one shown above contains a wheel that rotates to play the music, so after the wheel has made a full revolution it repeats the same music over. Also since the crank determines where the music begins and ends, the music could start and stop at any point along the wheel. Just as we did with the counting rhythm exercises, we are only interested in rhythms that sound different, this time in a music box.
 	\begin{enumerate}
-		\item In class we created a list of all four count rhythms with two strikes that sound different. There were two fo them. Whether you did it while completing the table of rhythms or not, list here all the different four count rhythms. Include rhythms with 0, 1, 2, 3, and 4 strikes. The zero-strike music box represents one that is broken!
+		\item In class we created a list of all four count rhythms with two strikes that sound different. There were two of them. Whether you did it while completing the table of rhythms or not, list here all the different four count rhythms. Include rhythms with 0, 1, 2, 3, and 4 strikes. The zero-strike music box represents one that is broken!
 		\item Find how many different bracelets you can make with four beads if you only have two different colors of beads.
 		\item Explain the connection between the four bead bracelets and the four count music boxes. Why are there the same number of each?
 		\item Pick a rhythm on 8 counts that you like, and record yourself playing it on your instrument of choice (bells, guitar, drum, clapping, stomping your feet, etc.) three times over (three rounds of it). You can use your phone's sound recorder. Write down the rhythm using the same symbols you used in class and say why you like it.
 		\item Extend the table from the "Finding your Rhythm" section to contain rhythms up to 8 counts and 8 strikes. Correct answers for up to 6 counts have already been filled in.
 	\end{enumerate}
+	\setlength{\tabcolsep}{11pt}
+	\renewcommand{\arraystretch}{1.5}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 		\cline{2-11} \multicolumn{1}{c|}{\multirow{2}{*}{}} & \multicolumn{9}{c|}{Strikes} & \multicolumn{1}{c|}{Total}\\
@@ -2007,13 +2013,13 @@ For the second question, a license plate with ``aA1'' in the first three positio
 }
 
 %<*chap1:exercises:areaCodesA>
-\item Originally area codes were made up of three numbers ($0$ through $9$) where the middle digit was either $0$ or $1$ and the first digit was non-zero. 
+\item Until 1995 area codes were made up of three numbers ($0$ through $9$) where the middle digit was either $0$ or $1$ and the first digit was neither 0 nor 1. 
 \begin{enumerate}
 \item\label{areaCodesAa} In this way, how many different area codes were possible?
 %</chap1:exercises:areaCodesA>
 
 \Instr{  
-Choosing a number for the first digit does not affect the number of choices we have for subsequent digits. The same is true for each pair of digits. So we may use the Fundamental Counting Principle. The first digit cannot be $0$ so there are $9$ possibilities to choose from. The second digit can only be $0$ or $1$ which gives $2$ possibilities for this digit. The last digit has no restrictions, so there are $10$ possibilities. Thus, the number of ways to form an area code at this time is $9\times 2 \times 10=180$.
+Choosing a number for the first digit does not affect the number of choices we have for subsequent digits. The same is true for each pair of digits. So we may use the Fundamental Counting Principle. The first digit cannot be $0$ or $1$ so there are $8$ possibilities to choose from. The second digit can only be $0$ or $1$ which gives $2$ possibilities for this digit. The last digit has no restrictions, so there are $10$ possibilities. Thus, the number of ways to form an area code at this time is $8\times 2 \times 10=160$.
 }
 
 %<*chap1:exercises:areaCodesB>
@@ -2021,7 +2027,7 @@ Choosing a number for the first digit does not affect the number of choices we h
 %</chap1:exercises:areaCodesB>
 
 \Instr{ 
-By using our solution from Question~{\normalfont\ref{areaCodesAa}}, all we need to do is find the number of forbidden numbers and subtract it from $180$ possible area codes. A forbidden configuration contains two consecutive $1$ at the end of the area code, so they would be of the form $?11$. Thus there are ten area codes of forbidden configurations of the form $?11$. So there are $180-9=171$ area codes of the specified form.
+By using our solution from Question~{\normalfont\ref{areaCodesAa}}, all we need to do is find the number of forbidden numbers and subtract it from $160$ possible area codes. A forbidden configuration contains two consecutive $1$ at the end of the area code, so they would be of the form $?11$. Thus there are eight area codes of forbidden configurations of the form $?11$ ($011$ and $111$ are not valid to begin with). So there are $160-8=152$ area codes of the specified form.
 }
 %<*chap1:exercises:endSteveDice>
 \end{enumerate}
