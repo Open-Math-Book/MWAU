@@ -1,0 +1,79 @@
+\documentclass[twoside,letterpaper,12pt]{report}
+
+\input{preamble.tex}
+
+\title{\vspace{2.5in}
+Mathematics in the World Around Us\\
+Student Workbook}
+
+\begin{document}
+\setboolean{InWB}{true}
+\maketitle
+
+\newpage
+\fancypagestyle{empty}{%
+  \fancyhf{}% Clear header/footer
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[L]{}% Right header
+  \fancyfoot[C]{}% Center footer
+  \fancyfoot[R]{}
+}
+
+\pagestyle{empty}
+
+\mbox{ }
+\vfill
+
+\begin{center}
+\begin{tabular}{c>{\raggedright}b{3.9in}}
+\includegraphics{images/CC-by} & 2022. \textit{Mathematics in the World Around Us} \textbf{Student Workbook} is licensed under a \href{http://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License}. \tabularnewline
+\end{tabular}
+\par\end{center}
+
+
+\newpage
+
+% give page numbers again
+\pagestyle{plain}
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+
+\newpage
+
+\chapter*{Acknowledgements}%\markboth{Acknowledgements}{Acknowledgements}}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+Much of the material in the intro, logic, and counting sections was remixed from work originally done at Auburn University and published under the title "Investigating Discrete Mathematics" in 2014. We thank the authors of that work for allowing us to remix, supplement, and re-license that material. It was a great aid in getting started. Work on this project was supported by a CT OER 2022 grant.
+
+\newpage
+%\cleartooddpage[\thispagestyle{plain}]
+
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[L]{Southern Connecticut State University}% Right header
+  \fancyfoot[C]{\thepage}% Center footer
+  \fancyfoot[R]{\itshape Chapter \thechapter}
+}
+\pagestyle{plain}
+
+\pagenumbering{arabic}
+
+\include{intro/intro}
+
+\include{counting/counting}
+
+\include{logic/logic}
+
+\include{ratios/RatiosAndProportions}
+
+\include{Geometry/Geometry}
+
+
+
+%\include{vector/vector}
+
+\end{document}
