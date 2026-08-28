@@ -1,0 +1,8 @@
+To create a new template for the plaited calendar model,
+first run 
+
+./cal.pl YYYY > YYYY.fig
+
+then
+
+fig2dev -L pdf YYYY.fig > YYYY.pdf
