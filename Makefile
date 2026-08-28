@@ -12,7 +12,7 @@ instructorsGuide.pdf: instructorsGuide.aux
 instructorsGuide.aux: *.tex */*.tex
 	pdflatex instructorsGuide
 	pdflatex instructorsGuide
-	#makeindex instructorsGuide
+	makeindex instructorsGuide
 	#bibtex instructorsGuide
 clean::
 	rm *.aux *~ *.bak */*.aux */*~ */*.bak
