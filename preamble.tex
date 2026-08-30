@@ -17,23 +17,31 @@
 \usepackage[figuresright]{rotating}
 \usepackage{appendix}
 \usepackage[T1]{fontenc}
-\usepackage[nottoc]{tocbibind} % Table of contents
-\usepackage[titles,subfigure]{tocloft}
+%\usepackage[nottoc]{tocbibind} % Table of contents
+%\usepackage[titles,subfigure]{tocloft}
 \usepackage{subfig}
 \usepackage{colortbl}
 \usepackage{ wasysym }
 \usepackage{rotating}
 \usepackage[table]{xcolor}
-\usepackage[hyperfootnotes=false]{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue}
+
 \usepackage{cancel}
 \let\checkmark\relax
 % \usepackage{dingbat}
 \usepackage{ifthen}
 \usepackage{longtable}
 \usepackage{enumitem}
+
+%Load hyperref last
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    allcolors=blue,
+    plainpages=false,
+    pdfpagelabels,
+    pdftitle={Math in the World Around Us}, 
+    pdfauthor={SCSU Math Department}
+    }
 
 \newcounter{bluefigure}
 \newcounter{bluetable}
@@ -50,7 +58,7 @@
       \else
         \clearpage
       \fi
-      \thispagestyle{empty}%
+      \t\hispagestyle{empty}%
       \if@twocolumn
         \onecolumn
         \@tempswatrue
@@ -157,12 +165,12 @@
 {\raggedright\footnotesize #1}}
 
 
-\renewcommand{\cftsecfont}{\normalfont}
-\renewcommand{\cftsecpagefont}{\normalfont}
-\renewcommand{\cftsecleader}{\normalfont\cftdotfill{\cftsecdotsep}}
+%\renewcommand{\cftsecfont}{\normalfont}
+%\renewcommand{\cftsecpagefont}{\normalfont}
+%\renewcommand{\cftsecleader}{\normalfont\cftdotfill{\cftsecdotsep}}
 
-\renewcommand{\cftsecdotsep}{\cftdotsep}
-\renewcommand{\cftbeforesecskip}{0em}
+%\renewcommand{\cftsecdotsep}{\cftdotsep}
+%\renewcommand{\cftbeforesecskip}{0em}
 
 
 % Page-Format Details
