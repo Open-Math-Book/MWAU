@@ -19,4 +19,4 @@ jobs:
       - name: Install LaTeX
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra
       - name: Run make
-      - run: make all
+        run: make all
